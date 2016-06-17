@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="MBDApp">
+    <head>
+        <meta charset="utf-8">
+        <title>MBD 2016</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="MBD 2016">
+        <meta name="mobile-web-app-title" content="MBD 2016">
+
+        <link rel="icon" type="image/ico" sizes="16x16" href="img/favicon_16x16.ico">
+        <link rel="icon" type="image/ico" sizes="256x256" href="img/favicon_256x256.ico">
+
+        <link rel="stylesheet" href="./css/normalize.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' type='text/css'>
+        <link rel="stylesheet" href="./css/stylesheet.css" media="screen" title="no title" charset="utf-8">
+
+        <script type="text/javascript" src="./node_modules/angular/angular.min.js"></script>
+        <script type="text/javascript" src="./node_modules/angular-resource/angular-resource.min.js"></script>
+        <script type="text/javascript" src="./node_modules/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/model.js"></script>
+        <script type="text/javascript" src="js/navbarCtrl.js"></script>
+        <script type="text/javascript" src="js/startCtrl.js"></script>
+        <script type="text/javascript" src="js/contactCtrl.js"></script>
+    </head>
+    <body id="body">
+        <ng-include src="'partials/navbar.html'" ng-controller="NavbarCtrl"></ng-include>
+        <div ng-view autoscroll="" style="height:calc(100% - 75px);padding-top:75px"></div>
+    </body>
+</html>
