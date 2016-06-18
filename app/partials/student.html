@@ -1,7 +1,97 @@
-<div style="">
-    <div class="">
-        HELLO STUDENTS!
+<div style="height:70%;background:url(img/background-companies.jpg) no-repeat center; background-size:cover;"></div>
+
+<div style="min-height:calc(80% - 50px);padding-top:50px;background-color:rgb(246,246,246);display:flex;align-items:center;flex-direction:column">
+    <h1>Företagen</h1>
+    <hr class="titleLine" style=""></hr>
+
+    <div class="" style="display:flex;flex-direction:column;width:100%;height:100%">
+
+        <div class="" ng-repeat="company in companies" style="margin-bottom:50px">
+            <div ng-click="showCompanyContent(company)" id="{{company.name}}Info" style="background-color:#daede8;width:50%;height:200px;position:relative;margin:0 auto;display:flex;justify-content:center;align-items:center;cursor:pointer;box-shadow: 0 0 68px -24px">
+                <img ng-src="{{company.image}}" alt="" style="height:auto;width:auto;max-height: 80px;max-width: 180px;display: inline-block;vertical-align: middle;"/>
+
+                <div class="" style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #daede8;position:absolute;bottom:-20px;left:calc(50% - 20px)"></div>
+            </div>
+
+
+            <div ng-show="company.name == clickedCompany" class="" style="background-color:#66907a;width:80%;min-height:400px;margin:0 auto;position:relative;display:flex">
+                <div ng-click="closeCompanyContent()" class="" style="position:absolute;top:10px;right:10px;color:black;cursor:pointer;font-size:20px">X</div>
+                <!-- <h1 style="position:absolute;top:0;left:10px;">River</h1> -->
+                <div class="" style="width:50%;height:100%;margin:10px 20px">
+                    <h1 style="">{{company.name}}</h1>
+                    <p style="text-align:justify;">
+                        Leave hair everywhere jump around on couch, meow constantly until given food, for unwrap toilet paper.
+                        Human give me attention meow cat is love, cat is life chase dog then run away. Cat slap dog in face
+                        give attitude, so pelt around the house and up and down stairs chasing phantoms behind the couch, for
+                        Gate keepers of hell or i am the best. Run in circles you call this cat food? stares at human while pushing
+                        stuff off a table but chase laser or hola te quiero. Sleep on keyboard. Slap owner's face at 5am until
+                        human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch
+                        water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree.
+                    </p>
+                    <div class="" style="text-align:right">
+                        <a class="myButton" style="background-color:black" href="http://www.river.se" target="_blank">Läs Mer!</a>
+                    </div>
+                </div>
+
+                <div class="" style="width:50%;display:flex;justify-content:center;align-items:center;/*height:100%;*/background-color:#fff">
+                    <img ng-src="{{company.image}}" alt="" style="max-width:300px;max-height:150px"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div ng-click="showCompanyContent(company)" ng-repeat="company in companies" id="{{company.name}}Info" style="background-color:rgba(100,100,100,0.8);width:50%;height:200px;position:relative;margin:40px;display:flex;justify-content:center;align-items:center;cursor:pointer">
+            <img ng-src="{{company.image}}" alt="" style="height:auto;width:auto;max-height: 80px;max-width: 180px;display: inline-block;vertical-align: middle;"/>
+
+
+            <div class="" style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #f00;
+            position:absolute;bottom:-20px;right:0"></div>
+
+
+            <div class="" style="background-color:#3ed;width:80%;min-height:400px;position:absolute;top:200px;left:0">
+                {{company.name}}
+            </div>
+        </div> -->
+
+
+        <!-- <div class="" style="width:80%;min-height:400px;background-color:rgb(102, 176, 163);margin:20px 40px;position:relative;display:flex;">
+            <div class="" style="position:absolute;top:10px;right:10px;color:black;cursor:pointer;font-size:20px">X</div>
+
+            <div class="" style="width:50%;height:100%;margin:10px 20px">
+                <h1 style="">River</h1>
+                <p style="text-align:justify;">
+                    Leave hair everywhere jump around on couch, meow constantly until given food, for unwrap toilet paper.
+                    Human give me attention meow cat is love, cat is life chase dog then run away. Cat slap dog in face
+                    give attitude, so pelt around the house and up and down stairs chasing phantoms behind the couch, for
+                    Gate keepers of hell or i am the best. Run in circles you call this cat food? stares at human while pushing
+                    stuff off a table but chase laser or hola te quiero. Sleep on keyboard. Slap owner's face at 5am until
+                    human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch
+                    water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree.
+                </p>
+                <div class="" style="text-align:right">
+                    <a class="myButton" style="background-color:black" href="http://www.river.se" target="_blank">Läs Mer!</a>
+                </div>
+            </div>
+
+            <div class="" style="width:50%;display:flex;justify-content:center;align-items:center;/*height:100%;*/background-color:#fff">
+                <img src="img/companies/kaplan.png" alt="" style="max-width:300px;max-height:150px"/>
+            </div>
+
+        </div> -->
+
+
+
+        <!-- <div class="" style="background-color:rgba(100,100,100,0.8);width:400px;height:200px;position:relative;">
+            <div class="" style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #f00;
+            position:absolute;bottom:-20px;right:0"></div>
+        </div>
+
+        <div class="" style="background-color:rgba(100,100,100,0.8);width:400px;height:200px;position:relative;">
+            <div class="" style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #f00;
+            position:absolute;bottom:-20px;right:0"></div>
+        </div> -->
     </div>
+
+
 </div>
 
 <ng-include src="'partials/footer.html'"></ng-include>

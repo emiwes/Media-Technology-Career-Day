@@ -10,7 +10,7 @@ MBDApp.config(['$routeProvider', function($routeProvider) {
     }).
     when('/students', {
         templateUrl: 'partials/student.html',
-        // controller: 'StudentCtrl'
+        controller: 'StudentCtrl',
         activeTab: 'students'
     }).
     when('/companies', {
