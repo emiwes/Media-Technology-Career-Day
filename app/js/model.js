@@ -1,9 +1,7 @@
 MBDApp.factory('MBDModel', function ($http) {
     console.log("MODEL is instantiated!");
 
-    this.getWelcomeText = function(){
-        return "blahahoiaqojewqewjpq";
-    };
+    li = true;
 
     this.getNavbarOptions = function(){
         return [
@@ -35,15 +33,21 @@ MBDApp.factory('MBDModel', function ($http) {
                 {'name':'unionen2', 'image':'img/companies/unionen.png'}
             ];
     };
-    // function getInstagram(){
-    //     $http.get("php/instagram.php").success( function(data){
-    //         console.log(data);
-	// 		var instaPosts = data.data;
-    //         console.log(instaPosts);
-    // 	});
-    // }
 
-    // getInstagram();
+    // $http.get("php/instagram.php").success( function(data){
+	// 	var instaPosts = data.data;
+    //     console.log(instaPosts);
+    //     // return instaPosts;
+    //
+    //     this.instagramPosts = instaPosts;
+    //     li = false;
+	// });
+
+    this.getLoadingInstagram = function(){
+        return li;
+    };
+
+
 
     return this;
 });
