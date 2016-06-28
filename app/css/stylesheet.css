@@ -375,6 +375,11 @@ https://codepen.io/brissmyr/pen/egidw
     text-align:justify;
 }
 
+
+.instagramLink:hover{
+    color:white;
+}
+
 /* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 
 @media only screen and (max-width: 769px){

@@ -14,7 +14,8 @@ MBDApp.controller('StartCtrl', function($scope, MBDModel, $http) {
             console.log("Call to instagram was a success!");
             console.log(response.data);
             console.log(response.data.data);
-            $scope.instagramPosts = response.data.data;
+            var instaPosts = response.data.data.slice(0,8);
+            $scope.instagramPosts = instaPosts;
     	}, function(data){
             console.log("Call to instagram failed");
         });

@@ -59,21 +59,23 @@
     <h1 style="padding-top:30px;text-align:center">Medias branschdag på instagram!</h1>
     <hr class="titleLine" style=""></hr>
     <div class="" style="max-width:1100px;display:flex;justify-content:center;flex-wrap:wrap;margin: 0 auto">
-        <div ng-repeat="post in instagramPosts" class="" style="max-width:230px;margin:20px 20px;border:solid 2px;border-radius:4px">
-            <div class="" style="position:relative;">
-                <div class="" style="background-color:#e5c51c;position:absolute;bottom:0;right:0;left:0;height:25px;text-align:right;padding:0 5px;">
-                    <div class="" style="display:inline-block;margin:0 2px">
-                        <img style="width:15px;height:auto;vertical-align:middle;"src="img/icons/heart.png" alt="" />  {{post.likes.count}}
+        <div ng-repeat="post in instagramPosts" class="" style="max-width:230px;margin:20px 20px;">
+            <a class="instagramLink" ng-href="{{post.link}}" target="_blank">
+                <div class="" style="position:relative;">
+                    <div class="" style="background-color:#e5c51c;position:absolute;bottom:0;right:0;left:0;height:25px;text-align:right;padding:0 5px;">
+                        <div class="" style="display:inline-block;margin:0 2px">
+                            <img style="width:15px;height:auto;vertical-align:middle;"src="img/icons/heart_red.png" alt="" />  {{post.likes.count}}
+                        </div>
+                        <div class="" style="display:inline-block;margin:0 2px">
+                            <img style="width:15px;height:auto;vertical-align:middle;"src="img/icons/comment_black.png" alt="" />  {{post.comments.count}}
+                        </div>
                     </div>
-                    <div class="" style="display:inline-block;margin:0 2px">
-                        <img style="width:15px;height:auto;vertical-align:middle;"src="img/icons/comment.png" alt="" />  {{post.comments.count}}
-                    </div>
+                    <img ng-src="{{post.images.low_resolution.url}}" style="width:100%;height:auto;" alt="" />
                 </div>
-                <a ng-href="{{post.link}}" target="_blank"> <img ng-src="{{post.images.low_resolution.url}}" style="width:100%;height:auto;" alt="" /></a>
-            </div>
-            <div class="" style="height:150px;overflow:auto">
-                {{post.caption.text}}
-            </div>
+                <div class="" style="height:110px;padding:0 5px;overflow:hidden;background-color:#66907a;color:white">
+                    {{post.caption.text}}
+                </div>
+            </a>
         </div>
     </div>
 
