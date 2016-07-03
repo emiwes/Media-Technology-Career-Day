@@ -16,6 +16,11 @@ MBDApp.controller('StartCtrl', function($scope, MBDModel, $http) {
             console.log(response.data.data);
             var instaPosts = response.data.data.slice(0,8);
             $scope.instagramPosts = instaPosts;
+            var date = new Date(parseInt(instaPosts[0].created_time)*1000);
+            var locale = "en-us";
+            var month = date.toLocaleString(locale, { month: "short" });
+            console.log(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
+            console.log(month);
     	}, function(data){
             console.log("Call to instagram failed");
         });

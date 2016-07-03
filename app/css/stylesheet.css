@@ -203,11 +203,11 @@ a:hover{
 }
 
 .welcomeWrapper{
-    min-height:80%;
+    min-height:470px;
     width:100%;
     background-color:rgb(246, 246, 246);
     display:flex;
-    justify-content:center;
+    /*justify-content:center;*/
     align-items:center;
     position: relative;
     z-index: 1;
@@ -222,7 +222,7 @@ a:hover{
 
 .userTypeContainer{
     text-align:center;
-    margin:0 100px;
+    margin:0 40px;
 }
 
 .userTypeParagraph{
@@ -417,7 +417,7 @@ https://codepen.io/brissmyr/pen/egidw
         margin: 0 15px;
     }
     .welcomeParagraph{
-        text-align:center;
+        /*text-align:center;*/
     }
 
     .userTypeWrapper{
