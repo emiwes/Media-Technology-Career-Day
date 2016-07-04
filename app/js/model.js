@@ -1,8 +1,8 @@
 MBDApp.factory('MBDModel', function ($http) {
     console.log("MODEL is instantiated!");
 
-    li = true;
-
+    var li = true;
+    var instagramPosts;
     this.getNavbarOptions = function(){
         return [
             {'option':'Start', 'hash':'start'},
@@ -34,17 +34,27 @@ MBDApp.factory('MBDModel', function ($http) {
             ];
     };
 
-    // $http.get("php/instagram.php").success( function(data){
-	// 	var instaPosts = data.data;
-    //     console.log(instaPosts);
-    //     // return instaPosts;
-    //
-    //     this.instagramPosts = instaPosts;
-    //     li = false;
-	// });
+    $http.get("php/instagram.php").then( function(response){
+            console.log("Call to instagram was a success!");
+            console.log(response.data);
+            console.log(response.data.data);
+            instagramPosts = response.data.data.slice(0,8);
+            var date = new Date(parseInt(instagramPosts[0].created_time)*1000);
+            var locale = "en-us";
+            var month = date.toLocaleString(locale, { month: "short" });
+            console.log(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
+            console.log(month);
+            li = false;
+    	}, function(data){
+            console.log("Call to instagram failed");
+    });
 
     this.getLoadingInstagram = function(){
         return li;
+    };
+
+    this.getInstagram = function(){
+        return instagramPosts;
     };
 
 

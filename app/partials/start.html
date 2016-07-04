@@ -67,7 +67,7 @@
         <h1 style="padding-top:50px;text-align:center">Medias branschdag på instagram!</h1>
         <hr class="titleLine" style=""></hr>
         <div class="" style="max-width:1100px;display:flex;justify-content:center;flex-wrap:wrap;margin: 0 auto;padding:30px 0 50px 0">
-            <div ng-repeat="post in instagramPosts" class="" style="max-width:260px;margin:20px 20px;">
+            <div ng-repeat="post in getInstagram()" class="" style="max-width:260px;margin:20px 20px;">
                 <a class="instagramLink" ng-href="{{post.link}}" target="_blank">
                     <div class="" style="position:relative;">
                         <img ng-src="{{post.images.standard_resolution.url}}" style="width:100%;height:auto;border-radius:4px;" alt="" />
@@ -80,9 +80,6 @@
                             <img style="width:15px;height:auto;vertical-align:middle;"src="img/icons/comment_black.png" alt="" />  {{post.comments.count}}
                         </div>
                     </div>
-                    <!-- <div class="" style="height:110px;padding:0 5px;overflow:hidden;background-color:#daede8;color:black">
-                    {{post.caption.text}}
-                </div> -->
                 </a>
             </div>
         </div>
@@ -91,4 +88,4 @@
 
 </div>
 
-<ng-include src="'partials/footer.html'"></ng-include>
+<ng-include src="'partials/footer.html'" ng-controller="FooterCtrl"></ng-include>
