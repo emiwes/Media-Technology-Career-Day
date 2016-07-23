@@ -1,4 +1,4 @@
-MBDApp.controller('NavbarCtrl', function($scope, MBDModel, $route) {
+MBDApp.controller('NavbarCtrl', function($scope, MBDModel, $route, $window) {
     console.log("NAVBAR controller is initiated!");
     var body = document.getElementById('body');
 
@@ -20,5 +20,28 @@ MBDApp.controller('NavbarCtrl', function($scope, MBDModel, $route) {
             body.style.overflow = "initial";
         }
     };
+
+    $scope.scrollToTop = function(){
+        $('html, body').animate({
+            scrollTop: $('body').offset().top
+        });
+    };
+
+    $window.addEventListener('scroll', function(val){
+        showScrollTopButton();
+    });
+
+    function showScrollTopButton(){
+        var oldState = $scope.showScrollButton;
+        if($window.pageYOffset > 700){
+            $scope.showScrollButton = true;
+        }
+        else{
+            $scope.showScrollButton = false;
+        }
+        if($scope.showScrollButton !== oldState){
+            $scope.$digest();
+        }
+    }
 
 });
