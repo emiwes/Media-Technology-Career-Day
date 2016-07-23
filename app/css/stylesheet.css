@@ -455,8 +455,29 @@ https://codepen.io/brissmyr/pen/egidw
 
     #companyPresentation{
         width:100%;
-        font-size: 12px;
-        line-height: 150%;
+        /*font-size: 12px;
+        line-height: 150%;*/
+    }
+
+    #lunchLecture{
+        width:100%;
+    }
+
+    #lunchLectureImgDesktop{
+        display:none;
+    }
+    #lunchLectureImgMobile{
+        display:block;
+    }
+
+    .studentHeaderMenu{
+        border:2px solid #FFD521;
+        height:40px;
+        margin: 0 30px;
+    }
+
+    #mailInputForm{
+        width:100%;
     }
 
 }
