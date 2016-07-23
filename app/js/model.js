@@ -6,8 +6,8 @@ MBDApp.factory('MBDModel', function ($http) {
     this.getNavbarOptions = function(){
         return [
             {'option':'Start', 'hash':'start'},
-            {'option':'För studenter', 'hash':'students'},
             {'option':'För företag', 'hash':'companies'},
+            {'option':'För studenter', 'hash':'students'},
             {'option':'Schema', 'hash':'schema'},
             {'option':'Kontakt', 'hash':'contact'}
         ];
