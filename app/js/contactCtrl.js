@@ -1,8 +1,6 @@
 MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
     console.log('CONTACT controller is instantiated!');
-	// $scope.title = "About us";
-	// $scope.projectLeader = "Niklas Gustavsson";
-	// $scope.artists = MBDModel.getWelcomeText();
+
     $scope.successMessage = "";
     var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
     var pattern = new RegExp(email_regex);
@@ -146,7 +144,7 @@ MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
         "surname":"Lennartsson",
         "position":"Logistikansvarig",
         "mail":"linnéa.lennartsson@mediasbranschdag.com",
-        "img":"img/profiles2/beata.jpg"
+        "img":"img/profiles2/linnea.jpg"
     },{
         "forename":"Emma",
         "surname":"Olsson",

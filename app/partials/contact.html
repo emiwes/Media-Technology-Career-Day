@@ -13,15 +13,23 @@
     </div>
 </div>
 
-<div class="" style="background-color:#daede8;display:flex;flex-direction:column;justify-content:center;align-items:center">
+<div class="" style="background-color:#daede8;display:flex;flex-direction:column;justify-content:center;align-items:center;padding: 0 15px">
     <h1 style="text-align:center;padding-top:30px">Maila oss!</h1>
     <hr class="titleLine" style=""></hr>
-    <div style="display:flex;flex-direction:column;align-items:flex-start;width:50%;" class="">
-        Namn* <input ng-model="name" style="border-radius:4px;border:none;margin: 5px 0;width:100%;" type="text" name="mailTitle" value="" placeholder="">
-        Epost* <input ng-model="email" style="border-radius:4px;border:none;margin: 5px 0;width:100%;" type="text" name="mailTitle" value="" placeholder="">
-        Ämne* <input ng-model="subject" style="border-radius:4px;border:none;margin: 5px 0;width:100%;" type="text" name="mailSender" value="" placeholder="">
-        Meddelande* <textarea ng-model="message" style="border:none;border-radius:4px;width:100%;resize:vertical;" name="mailMessage" rows="8" cols="" placeholder=""></textarea>
-        <div style="display:flex;align-items:baseline;" class="">
+    <div id="mailInputForm" style="" class="">
+        <div class="" style="width:100%">
+            Namn* <input ng-model="name" style="border-radius:4px;border:none;margin: 5px 0;width:100%;padding:4px 0" type="text" name="mailTitle" value="" placeholder="">
+        </div>
+        <div class="" style="width:100%">
+            Epost* <input ng-model="email" style="border-radius:4px;border:none;margin: 5px 0;width:100%;padding:4px 0" type="text" name="mailTitle" value="" placeholder="">
+        </div>
+        <div class="" style="width:100%">
+            Ämne* <input ng-model="subject" style="border-radius:4px;border:none;margin: 5px 0;width:100%;padding:4px 0" type="text" name="mailSender" value="" placeholder="">
+        </div>
+        <div class="" style="width:100%">
+            Meddelande* <textarea ng-model="message" style="border:none;border-radius:4px;margin: 5px 0;width:100%;resize:vertical;padding:4px 0" name="mailMessage" rows="8" cols="" placeholder=""></textarea>
+        </div>
+        <div style="display:flex;align-items:baseline;width:100%;" class="">
             <a class="myButton" id="contactEmailButton" style="background-color:#3a4eb9" ng-click="sendMail()">Skicka</a>
             <div style="margin: 0 5px" id="contactFeedbackContainer">
                 {{successMessage}}
