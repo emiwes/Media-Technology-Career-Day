@@ -44,6 +44,13 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
         $scope.image = $scope.companies[$scope.number].image;
     };
 
+    $scope.scrollTo = function(id){
+        console.log(id);
+        $("html, body").animate({
+            scrollTop: $(id).offset().top - navbarHeight
+        });
+    };
+
     getCompanies();
     $scope.name = $scope.companies[0].name;
     $scope.image = $scope.companies[0].image;
