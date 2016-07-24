@@ -33,7 +33,7 @@
         <script type="text/javascript" src="js/footerCtrl.js"></script>
     </head>
     <body id="body">
-        <div id="scrollTopButton" class="" style="position:fixed;right:10px;bottom:10px;width:50px;height:50px;border-radius:4px;box-shadow:0px 0px 15px -10px;background-color:#FFD521;z-index:9999;text-align:center;" ng-click="scrollToTop()" ng-show="showScrollButton" ng-controller="NavbarCtrl">
+        <div id="scrollTopButton" ng-click="scrollToTop()" ng-show="showScrollButton" ng-controller="NavbarCtrl">
             <img style="width:75%;height:100%;vertical-align:middle;display:inline-block" src="img/icons/up_black.svg" alt="" />
         </div>
         <ng-include src="'partials/navbar.html'" ng-controller="NavbarCtrl"></ng-include>
