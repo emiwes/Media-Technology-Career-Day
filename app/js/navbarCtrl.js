@@ -24,7 +24,7 @@ MBDApp.controller('NavbarCtrl', function($scope, MBDModel, $route, $window) {
     $scope.scrollToTop = function(){
         $('html, body').animate({
             scrollTop: $('body').offset().top
-        });
+        }, 750);
     };
 
     $window.addEventListener('scroll', function(val){

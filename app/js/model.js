@@ -3,50 +3,46 @@ MBDApp.factory('MBDModel', function ($http) {
 
     var li = true;
     var instagramPosts;
+    var teamMembers;
+    var companies;
+
     this.getNavbarOptions = function(){
         return [
             {'option':'Start', 'hash':'start'},
             {'option':'För företag', 'hash':'companies'},
             {'option':'För studenter', 'hash':'students'},
-            {'option':'Schema', 'hash':'schema'},
+            {'option':'Schema', 'hash':'schedule'},
             {'option':'Kontakt', 'hash':'contact'}
         ];
     };
 
-    this.getCompanies = function(){
+    $http.get("php/getTeam.php").then( function(response){
+        console.log("Fetching team was a success!");
+        teamMembers = response.data;
+    }, function(error){
+        console.log("Could not fetch team members");
+        console.log(error);
+    });
 
-            return [
-                {'name':'River', 'image':'img/companies/river.png'},
-                {'name':'Dynabyte', 'image':'img/companies/dynabyte.png'},
-                {'name':'Schibsted', 'image':'img/companies/schibsted.png'},
-                {'name':'Apegroup', 'image':'img/companies/apegroup.png'},
-                {'name':'Kaplan', 'image':'img/companies/kaplan.png'},
-                {'name':'Sveriges Ingenjörer', 'image':'img/companies/sverigesIngenjorer.png'},
-                {'name':'unionen', 'image':'img/companies/unionen.png'},
-
-                {'name':'River2', 'image':'img/companies/river.png'},
-                {'name':'Dynabyte2', 'image':'img/companies/dynabyte.png'},
-                {'name':'Schibsted2', 'image':'img/companies/schibsted.png'},
-                {'name':'Apegroup2', 'image':'img/companies/apegroup.png'},
-                {'name':'Kaplan2', 'image':'img/companies/kaplan.png'},
-                {'name':'Sveriges Ingenjörer2', 'image':'img/companies/sverigesIngenjorer.png'},
-                {'name':'unionen2', 'image':'img/companies/unionen.png'}
-            ];
-    };
+    $http.get("php/getCompanies.php").then( function(response){
+        console.log("Fetching companies was a success!");
+        companies = response.data;
+    }, function(error){
+        console.log("Could not fetch companies");
+        console.log(error);
+    });
 
     $http.get("php/instagram.php").then( function(response){
             console.log("Call to instagram was a success!");
-            console.log(response.data);
-            console.log(response.data.data);
             instagramPosts = response.data.data.slice(0,8);
             var date = new Date(parseInt(instagramPosts[0].created_time)*1000);
             var locale = "en-us";
             var month = date.toLocaleString(locale, { month: "short" });
-            console.log(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
-            console.log(month);
+            //console.log(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
             li = false;
-    	}, function(data){
+    	}, function(error){
             console.log("Call to instagram failed");
+            console.log(error);
     });
 
     this.getLoadingInstagram = function(){
@@ -57,7 +53,13 @@ MBDApp.factory('MBDModel', function ($http) {
         return instagramPosts;
     };
 
+    this.getTeamMembers = function(){
+        return teamMembers;
+    };
 
+    this.getCompanies = function(){
+        return companies;
+    };
 
     return this;
 });

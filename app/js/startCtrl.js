@@ -6,7 +6,7 @@ MBDApp.controller('StartCtrl', function($scope, MBDModel, $http) {
     $scope.scrollDown = function(){
         $("html, body").animate({
             scrollTop: $("#welcomeWrapper").offset().top - navbarHeight
-        });
+        }, 750);
     };
 
     $scope.loadingInstagram = function(){

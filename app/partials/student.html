@@ -1,4 +1,4 @@
-<div style="height:70%;background:url(img/background-companies.jpg) no-repeat center; background-size:cover;position:relative">
+<div style="height:450px;background:url(img/background-companies.jpg) no-repeat center; background-size:cover;position:relative">
     <div class="" style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);"></div>
     <div class="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;height:100%;z-index:1;position:relative">
         <div ng-click="scrollTo('#companySection')" class="studentHeaderMenu" style=""><h2>Företagen</h2></div>
@@ -13,38 +13,24 @@
 
         <div class="" style="display:flex;flex-direction:column;width:100%;">
 
-            <div class="companyListWrapper" ng-repeat="company in companies" style="margin-bottom:50px">
-                <div class="companyHeader" ng-click="presentCompanyContent(company.name)" id="{{company.name}}Info" style="">
-                    <img ng-src="{{company.image}}" alt="" style="height:auto;width:auto;max-height: 80px;max-width: 180px;display: inline-block;vertical-align: middle;"/>
+            <div class="companyListWrapper" ng-repeat="company in getCompanies()" style="margin-bottom:50px">
+                <div class="companyHeader" ng-click="presentCompanyContent(company.id)" id="{{company.id}}" style="">
+                    <img ng-src="img/companies/{{company.logo}}" alt="" style="height:auto;width:auto;max-height: 80px;max-width: 180px;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;"/>
 
                     <div class="" style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid white;position:absolute;bottom:-20px;left:calc(50% - 20px)"></div>
                 </div>
 
 
-                <div ng-show="company.name == clickedCompany" class="companyContent" id="" style="">
-                    <div ng-click="presentCompanyContent(company.name)" class="companyContentClose" style="position:absolute;top:10px;right:15px;color:black;cursor:pointer;height:32px;width:32px;"></div>
+                <div ng-show="company.id == clickedCompany" class="companyContent" id="" style="">
+                    <div ng-click="presentCompanyContent(company.id)" class="companyContentClose" style="position:absolute;top:10px;right:15px;color:black;cursor:pointer;height:32px;width:32px;"></div>
 
                     <div class="" style="width:100%;height:100%;margin:10px 20px">
                         <h1 style="">{{company.name}}</h1>
-                        <p style="text-align:justify;">
-                            Leave hair everywhere jump around on couch, meow constantly until given food, for unwrap toilet paper.
-                            Human give me attention meow cat is love, cat is life chase dog then run away. Cat slap dog in face
-                            give attitude, so pelt around the house and up and down stairs chasing phantoms behind the couch, for
-                            Gate keepers of hell or i am the best. Run in circles you call this cat food? stares at human while pushing
-                            stuff off a table but chase laser or hola te quiero. Sleep on keyboard. Slap owner's face at 5am until
-                            human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch
-                            water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree.
-
-                            stuff off a table but chase laser or hola te quiero. Sleep on keyboard. Slap owner's face at 5am until
-                            human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch
-                            water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree.
-
-                            stuff off a table but chase laser or hola te quiero. Sleep on keyboard. Slap owner's face at 5am until
-                            human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch
-                            water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree.
+                        <p style="text-align:justify;white-space:pre-line">
+                            {{company.description}}
                         </p>
-                        <div class="" style="text-align:right">
-                            <a class="myButton" style="background-color:black" href="http://www.river.se" target="_blank">Läs Mer!</a>
+                        <div class="" style="text-align:left">
+                            <a class="myButton whiteText" style="background-color:black" ng-href="http://{{company.website}}" target="_blank">Läs Mer!</a>
                         </div>
                     </div>
                 </div>
@@ -55,36 +41,34 @@
 
     </div>
 
-    <div class="companyDesktop" style="min-height:800px;">
+    <div class="companyDesktop" style="">
         <h1>Företagen</h1>
         <hr class="titleLine" style=""></hr>
-        <div class="" id="contentWrapper" style="min-height:400px;background-color:white;padding:20px 3% 40px 3%;display:flex;flex-direction:column;position:relative;">
-            <div ng-click="incrementIndex(1)" class="" style="cursor:pointer;border-top:2px solid;border-right:2px solid;width:40px;height:40px;transform:rotate(45deg);position:absolute;right:30px;top:calc(50% - 42px);"></div>
-            <div ng-click="incrementIndex(-1)" class="" style="cursor:pointer;border-top:2px solid;border-left:2px solid;width:40px;height:40px;transform:rotate(-45deg);position:absolute;left:30px;top:calc(50% - 42px);"></div>
+        <div class="" id="contentWrapper" style="min-height:410px;background-color:white;padding:20px 3% 40px 3%;display:flex;flex-direction:column;position:relative;">
+            <div ng-click="incrementIndex(1)" class="" style="cursor:pointer;border-top:2px solid;border-right:2px solid;width:40px;height:40px;transform:rotate(45deg);position:absolute;right:30px;top:calc(50% - 42px);z-index:1000"></div>
+            <div ng-click="incrementIndex(-1)" class="" style="cursor:pointer;border-top:2px solid;border-left:2px solid;width:40px;height:40px;transform:rotate(-45deg);position:absolute;left:30px;top:calc(50% - 42px);z-index:1000"></div>
             <h1 style="margin:15px 0 0 50px">{{name}}</h1>
             <div class="" style="display:flex;margin-left:50px;">
-                <p style="width:60%;text-align:justify;white-space: pre-line">
-                    Leave hair everywhere jump around on couch, meow constantly until given food, for unwrap toilet paper. Human give me attention meow cat is love, cat is life chase dog then run away. Cat slap dog in face give attitude, so pelt around the house and up and down stairs chasing phantoms behind the couch, for Gatekeepers of hell or i am the best. Run in circles you call this cat food? stares at human while pushing stuff off a table but chase laser or hola te quiero. Sleep on keyboard.
-
-                    Slap owner's face at 5am until human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree. stuff off a table but chase laser or hola te quiero.
-
-                    Sleep on keyboard. Slap owner's face at 5am until human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree. stuff off a table but chase laser or hola te quiero. Sleep on keyboard. Slap owner's face at 5am until human fills food dish. Meow gnaw the corn cob but stick butt in face, but leave hair everywhere. Touch water with paw then recoil in horror cat snacks, but meowing non stop for food and knock over christmas tree.</p>
-                    <div class="" style="width:40%;display:flex;justify-content:center;align-items:center;/*height:100%;*/background-color:#fff">
-                        <img src="{{image}}" alt="" style="max-width:50%;max-height:150px"/>
-                    </div>
+                <div style="width:60%;">
+                    <p style="width:100%;text-align:justify;white-space: pre-line">{{description}}</p>
+                    <a class="myButton whiteText" style="background-color:black" ng-href="http://{{website}}" target="_blank">Läs mer!</a>
+                </div>
+                <div class="" style="width:40%;background-color:#fff;position:relative;">
+                    <img ng-src="img/companies/{{image}}" alt="" style="max-width:50%;max-height:150px;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;"/>
                 </div>
             </div>
-            <div style="background-color:#daede8;padding: 15px 0">
-                <div class="" style="display:flex;flex-wrap:wrap;max-width:1300px;margin:0 auto;justify-content:center;align-items:center;">
-                    <div ng-class="{'activeCompany': $index == number}" ng-click="showCompany(company, $index)" class="" ng-repeat="company in companies" style="cursor:pointer;width:200px;height:100px;background-color:white;margin:20px 20px;">
-                        <div class="" style="justify-content:center;align-items:center;display:flex;height:100%;">
-                            <img ng-src="{{company.image}}" alt="" style="height:auto;width:auto;max-height: 70px;max-width: 150px;display: inline-block;vertical-align: middle;"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
+        <div style="background-color:#daede8;padding: 15px 0">
+            <div class="" style="display:flex;flex-wrap:wrap;max-width:1300px;margin:0 auto;justify-content:center;align-items:center;">
+                <div ng-class="{'activeCompany': $index == number}" ng-click="showCompany(company, $index)" class="" ng-repeat="company in getCompanies()" style="cursor:pointer;width:200px;height:100px;background-color:white;margin:20px 20px;">
+                    <div class="" style="position:relative;height:100%;">
+                        <img ng-src="img/companies/{{company.logo}}" alt="" style="height:auto;width:auto;max-height: 70px;max-width: 150px;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <div id="lunchLectureImgMobile" style="">
@@ -101,10 +85,10 @@
                         Schibsted
                     </h2>
                     <div class="" style="">
-                        30:e Oktober, E2
+                        TBA
                     </div>
                 </div>
-                <a href="#" class="myButton" style="background-color:#daede8;color:black">Anmäl</a>
+                <a href="#" class="myButton" style="background-color:#daede8;">Anmäl</a>
             </div>
             <div class="" style="display:flex;align-items:center;width:100%;justify-content:space-between">
                 <div class="">
@@ -112,27 +96,27 @@
                         River
                     </h2>
                     <div class="" style="">
-                        1:a November, D3
+                        TBA
                     </div>
                 </div>
-                <a href="#" class="myButton" style="background-color:#daede8;color:black">Anmäl</a>
+                <a href="#" class="myButton" style="background-color:#daede8;">Anmäl</a>
             </div>
             <div class="" style="display:flex;align-items:center;width:100%;justify-content:space-between">
                 <div class="">
                     <h2 class="" style="margin-top: 0">
-                        Företag
+                        Spotify
                     </h2>
                     <div class="" style="">
-                        2:a November, E42
+                        TBA
                     </div>
                 </div>
-                <a href="#" class="myButton" style="background-color:#daede8;color:black">Anmäl</a>
+                <a href="#" class="myButton" style="background-color:#daede8;">Anmäl</a>
             </div>
         </div>
     </div>
     <div id="lunchLectureImgDesktop" style="">
         <div style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)"></div>
-        <img style="width:150px;height:auto;position:absolute;z-index:2;left:calc(50% - 75px);top:calc(50% - 75px)" src="img/icons/student.png" alt="" />
+        <img style="width:150px;height:auto;position:absolute;z-index:2;left:calc(50% - 75px);top:calc(50% - 75px)" src="img/icons/lecture2.png" alt="" />
     </div>
 </div>
 

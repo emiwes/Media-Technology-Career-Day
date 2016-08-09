@@ -2,11 +2,22 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
     console.log("Student controller is initiated!");
 
     var navbarHeight = 75;
-    $scope.number = 0;
+    var companies = [];
 
-    function getCompanies(){
-        $scope.companies = MBDModel.getCompanies();
-    }
+    $scope.getCompanies = function(){
+        if(companies.length < 1){
+            companies = MBDModel.getCompanies();
+            if (companies === undefined) {
+                console.log('<<< COMPANIES ARE NOW UNDEFINED >>>');
+                companies = [];
+                return companies;
+            }
+            var randomIndex = Math.floor(Math.random()*companies.length);
+            $scope.number = randomIndex;
+            setCompany(randomIndex);
+        }
+        return companies;
+    };
 
     $scope.presentCompanyContent = function(companyName){
         if( companyName === $scope.clickedCompany ){
@@ -14,10 +25,10 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
         }
         else{
             $scope.clickedCompany = companyName;
-
+            console.log(companyName);
             $timeout(function(){
                 $('html, body').animate({
-                    scrollTop: $('#' + companyName + 'Info').offset().top - navbarHeight - 15
+                    scrollTop: $('#' + companyName).offset().top - navbarHeight - 15
                 });
             }, 300);
         }
@@ -25,8 +36,7 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
 
     $scope.showCompany = function(company, index){
         $scope.number = index;
-        $scope.name = company.name;
-        $scope.image = company.image;
+        setCompany($scope.number);
         $('html, body').animate({
             scrollTop: $('#contentWrapper').offset().top - navbarHeight - 15
         });
@@ -34,24 +44,46 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
 
     $scope.incrementIndex = function(increment){
         $scope.number += increment;
-        if( $scope.number === $scope.companies.length){
+        if( $scope.number === companies.length){
             $scope.number = 0;
         }
         else if($scope.number === -1){
-            $scope.number = $scope.companies.length -1;
+            $scope.number = companies.length -1;
         }
-        $scope.name = $scope.companies[$scope.number].name;
-        $scope.image = $scope.companies[$scope.number].image;
+        setCompany($scope.number);
     };
 
     $scope.scrollTo = function(id){
         console.log(id);
         $("html, body").animate({
             scrollTop: $(id).offset().top - navbarHeight
-        });
+        }, 1000);
     };
 
-    getCompanies();
-    $scope.name = $scope.companies[0].name;
-    $scope.image = $scope.companies[0].image;
+    function setCompany(index){
+        $scope.name = companies[index].name;
+        $scope.image = companies[index].logo;
+        $scope.description = companies[index].description;
+        $scope.website = companies[index].website;
+    }
+
+    document.addEventListener('keydown', function(e){
+        switch (e.keyCode) {
+            case 37:
+                $scope.incrementIndex(-1);
+                break;
+            case 39:
+                $scope.incrementIndex(1);
+                break;
+
+            default:
+                break;
+        }
+        $scope.$digest();
+    });
+
+
+    //getCompanies();
+    //$scope.name = $scope.companies[0].name;
+    //$scope.image = $scope.companies[0].image;
 });

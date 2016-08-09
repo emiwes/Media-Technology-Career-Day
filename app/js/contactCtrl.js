@@ -17,6 +17,13 @@ MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
         }, 1000 );
     }
 
+    $scope.getTeamMembers = function(){
+        var members = MBDModel.getTeamMembers();
+        console.log("fetching members to Controller");
+        console.log(members);
+		return members;
+	};
+
     $scope.sendMail = function(){
         if($scope.name && $scope.email && $scope.subject && $scope.message ){
             if( checkEmail($scope.email) ){
