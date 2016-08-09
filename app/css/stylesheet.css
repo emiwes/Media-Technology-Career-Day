@@ -1,5 +1,9 @@
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
 html{
-    font-family: Lato, sans-serif, Arial, Helvetica;
+    font-family: 'Lato', sans-serif, Arial, Helvetica;
 	font-size: 14px;
 	font-weight: 200;
 	letter-spacing: 1px;
@@ -13,6 +17,7 @@ body{
 
 h1{
     margin-top: 0;
+    line-height: normal;
 }
 
 /*body::-webkit-scrollbar{*/
@@ -29,7 +34,6 @@ a{
 }
 a:visited{
     color: default;
-    /*color: #E2A302;*/
 }
 a:hover{
     color: #FFD521;
@@ -48,7 +52,8 @@ a:hover{
     position:fixed;
     width:100%;
     height:75px;
-    background-color:#66907a;
+    /*background-color:#66907a;*/
+    background-color: rgb(55,55,56);
     z-index: 9999;
     box-shadow: 0px -5px 20px 5px #111111;
 }
@@ -148,24 +153,13 @@ a:hover{
 #menu{
     width: 100%;
     height: 0;
-    /*margin: -100px 0 0 -50px;*/
-    /*padding: 50px;*/
-    /*padding-top: 125px;*/
     position: fixed;
     top:75px;
     left:0;
-    /*background-color: #66907a;*/
     background-color: black;
-    /*opacity: 0.8;*/
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
-
-    /*transform-origin: 0% 0%;
-    -webkit-transform-origin: 0% 0%;*/
-    /*transform: translate(100%, 100%);
-    -webkit-transform: translate(100%, 100%);*/
-
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     -webkit-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     transition: height 0.3s ease;
@@ -173,7 +167,6 @@ a:hover{
 
 #menuToggle input:checked ~ #menu{
   transform: scale(1.0, 1.0);
-  /*opacity: 0.8;*/
   height: calc(100% - 75px);
   transition: height 0.3s ease;
 }
@@ -207,7 +200,6 @@ a:hover{
     width:100%;
     background-color:rgb(246, 246, 246);
     display:flex;
-    /*justify-content:center;*/
     align-items:center;
     position: relative;
     z-index: 1;
@@ -231,27 +223,31 @@ a:hover{
 }
 
 .myButton {
-	background-color:#d25858;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
 	border-radius:4px;
 	border:none;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
 	padding:10px 20px;
 	text-decoration:none;
     margin: 15px 0;
+    color:black;
 }
-.myButton:hover {
-    /*color:#d4c224;*/
-	background-color:#d25858;
+
+.myButton:hover{
+    color:#FFD521;
 }
+
 .myButton:active {
 	position:relative;
 	top:2px;
+}
+
+.whiteText{
+    color:white;
 }
 
 input.myButton:focus {
@@ -295,13 +291,11 @@ input.myButton:focus {
 
 .companyContent p {
     margin-top: 2em;
-    /*line-height: 150%;*/
 }
 
 .companyContent h1{
     word-wrap: break-word;
     margin-right:30px;
-    /*line-height: 100%;*/
 }
 
 .companyContent.ng-hide-add, .companyContent.ng-hide-remove {
@@ -367,17 +361,12 @@ https://codepen.io/brissmyr/pen/egidw
     height:200px;
     position:relative;
     margin:0 auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
     cursor:pointer;
     box-shadow: 0 0 30px -15px;
 }
 
 .activeCompany{
-    /*border: 1px solid rgba(81, 203, 238, 1);*/
     box-shadow: 0 0 9px rgba(81, 203, 238, 1);
-
 }
 
 .companyDesktop{
@@ -400,7 +389,6 @@ https://codepen.io/brissmyr/pen/egidw
     max-width:800px;
     text-align:justify;
 }
-
 
 .instagramLink:hover{
     color:white;
@@ -449,6 +437,10 @@ https://codepen.io/brissmyr/pen/egidw
     flex-direction:column;
     align-items:center;
     width:60%;
+}
+
+.socialMediaLink:hover{
+    opacity:0.7;
 }
 
 /* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
@@ -526,8 +518,6 @@ https://codepen.io/brissmyr/pen/egidw
 
     #companyPresentation{
         width:100%;
-        /*font-size: 12px;
-        line-height: 150%;*/
     }
 
     #lunchLecture{
