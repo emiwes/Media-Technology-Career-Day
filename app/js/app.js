@@ -15,7 +15,7 @@ MBDApp.config(['$routeProvider', function($routeProvider) {
     }).
     when('/companies', {
         templateUrl: 'partials/company.html',
-        // controller: 'CompanyCtrl'
+        controller: 'CompanyCtrl',
         activeTab: 'companies'
     }).
     when('/schedule', {

@@ -1,6 +1,13 @@
-<div style="height:450px;background:url(img/group_color_1024.jpg) no-repeat center; background-size:cover;"></div>
+<div style="height:450px;background:url(img/group_color_1024.jpg) no-repeat center; background-size:cover;position:relative">
+    <div class="" style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);"></div>
+    <div class="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;height:100%;z-index:1;position:relative">
+        <div ng-click="scrollTo('#mediatechnologySection')" class="companyHeaderMenu" style=""><h2>Medieteknik</h2></div>
+        <div ng-click="scrollTo('#fairSection')" class="companyHeaderMenu" style=""><h2>Mässan</h2></div>
+        <div ng-click="scrollTo('#packageSection')" class="companyHeaderMenu" style=""><h2>Paketet</h2></div>
+    </div>
+</div>
 
-<div class="" style="background-color:white;display:flex;flex-direction:column;align-items:center;padding:50px 15px">
+<div id="mediatechnologySection" class="" style="background-color:white;display:flex;flex-direction:column;align-items:center;padding:50px 15px">
     <h1>Vilka är vi?</h1>
     <hr class="titleLine" style=""></hr>
     <div id="companyPresentation" style="white-space: pre-line">
@@ -15,17 +22,48 @@
             Medias Branschdag är årets bästa tillfälle för er att visa upp er verksamhet mot potentiella medarbetare eller framtida kunder.
         <h2 style="text-align:left">Välkommen!</h2>
     </div>
+</div>
 
+<div id="fairSection" class="" style="padding:50px 15px;background-color:#daede8;">
+    <h1 style="text-align:center">Mässan</h1>
+    <hr class="titleLine" style=""></hr>
+    <div style="display:flex;justify-content:center;align-items:flex-start;flex-wrap:nowrap;height:100%;margin-top:50px;">
+        <div style="text-align:center;margin:0 50px">
+            <h2>När?</h2>
+            <div style="font-weight:bold">
+                3:e November
+            </div>
+            <div style="font-weight:bold">
+                08:00 - 17:00
+            </div>
+        </div>
+        <div style="text-align:center;margin:0 50px">
+            <h2>Var?</h2>
+            <div style="font-weight:bold">
+                Nymble, KTH
+            </div>
+            <div style="font-weight:bold">
+                Drottning Kristinas väg 15
+            </div>
+        </div>
+    </div>
+    <div class="" style="margin:0 auto;max-width:800px;text-align:justify;white-space:pre-line">
+        Mässan startar den 3:e November och innehåller bland annat en heldag med inspirerande föreläsningar och spännande företag. Vi kommer att hålla till i THS kårhus, Nymble, som ligger på Drottning Kristinas väg 15 vid Kungliga Tekniska Högskolan.
+
+        Under dagen är mässan öppen för alla studenter på KTH, men vi riktar oss särskilt mot medieteknikstudenter då dessa har ett brett intresse för design, programmering, och business. Ett perfekt tillfälle för ditt företag att hitta studenter för framtiden!
+
+        Dagen avslutas med en stor sittning där era företagsrepresentanter har möjlighet att komma och äta och mingla med våra studenter i en mer avslappnad miljö.
+    </div>
 </div>
 
 
-<div style="padding:50px 15px;background:url(img/KTH_blur.jpg) center no-repeat;background-size:cover;position:relative;color:white">
+<div id="packageSection" style="padding:50px 15px;background:url(img/KTH_blur.jpg) center no-repeat;background-size:cover;position:relative;color:white">
     <div class="" style="background-color:rgba(0,0,0,0.5);position:absolute;height:100%;width:100%;left:0;top:0"></div>
     <div class="" style="max-width: 1100px;z-index: 1;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;margin: 0 auto;position: relative;flex-direction: column;">
         <h1>Branschdagspaketet</h1>
         <hr class="titleLine" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));"></hr>
         <h2 style="text-align:center">För att delta i Medias Branschdag erbjuder vi följande paket:</h2>
-        <div class="" style="display: flex;align-items: center;flex-wrap: wrap;justify-content: center;min-height: 300px;padding: 20px 0;">
+        <div class="" style="display: flex;align-items: center;flex-wrap: wrap;justify-content: center;padding: 20px 0;">
             <div style="height:200px;width:200px;text-align:center;padding:0 20px" class="">
                 <img style="width:80px;height:auto" src="img/icons/booth.png" alt="" />
                 <h4>Monterplats: 4kvm</h4>
@@ -44,6 +82,7 @@
             </div>
         </div>
         <h2>Pris: 12000 SEK</h2>
+        <a href="#contact#contactForm" class="myButton" style="background-color:#daede8">Till anmälan</a>
     </div>
 </div>
 
@@ -55,7 +94,6 @@
             <img style="width:80%;height:auto;border-radius:50%;box-shadow: 0px 0px 20px -5px" ng-src="img/profiles2/christian.jpg" alt="" />
             <h3 style="margin: 0px 0px">Christian Abdelmassih</h3>
             <h4 style="margin: 0px 0px">Företagskontakt</h4>
-            <!-- <a href="mailto:christian.abdelmassih@mediasbranshdag.com"><h5 style="margin: 0px 0px 30px 0px;color:black;font-size:10px">christian.abdelmassih@mediasbranshdag.com</h5></a> -->
             <a href="mailto:mailto:christian.abdelmassih@mediasbranshdag.com"><img src="img/icons/mail_black_copy.png" alt="" style="height:auto;width:30px;margin: 5px 0 30px 0" /></a>
             <a href="https://se.linkedin.com/in/christianabdelmassih" target="_blank"><img src="img/icons/linkedin.png" alt="" style="height:auto;width:30px;margin:5px 0 30px 0" /></a>
         </div>
@@ -63,7 +101,6 @@
             <img style="width:80%;height:auto;border-radius:50%;box-shadow: 0px 0px 20px -5px" ng-src="img/profiles2/sabina.jpg" alt="" />
             <h3 style="margin: 0px 0px">Sabina von Essen</h3>
             <h4 style="margin: 0px 0px">Ansvarig för Näringslivsgruppen</h4>
-            <!-- <a href="mailto:sabina.v.essen@mediasbranshdag.com"><h5 style="margin: 0px 0px 30px 0px;color:black;font-size:10px">sabina.v.essen@mediasbranshdag.com</h5></a> -->
             <a href="mailto:mailto:sabina.v.essen@mediasbranshdag.com"><img src="img/icons/mail_black_copy.png" alt="" style="height:auto;width:30px;margin: 5px 0 30px 0" /></a>
             <a href="https://se.linkedin.com/in/sabina-von-essen-5bb976102" target="_blank"><img src="img/icons/linkedin.png" alt="" style="height:auto;width:30px;margin:5px 0 30px 0" /></a>
         </div>
@@ -71,7 +108,6 @@
             <img style="width:80%;height:auto;border-radius:50%;box-shadow: 0px 0px 20px -5px" ng-src="img/profiles2/david.jpg" alt="" />
             <h3 style="margin: 0px 0px">David Traeneus</h3>
             <h4 style="margin: 0px 0px">Företagskontakt</h4>
-            <!-- <a href="mailto:david.traeneus@mediasbranshdag.com"><h5 style="margin: 0px 0px 30px 0px;color:black;font-size:10px">david.traeneus@mediasbranshdag.com</h5></a> -->
             <a href="mailto:mailto:david.traeneus@mediasbranshdag.com"><img src="img/icons/mail_black_copy.png" alt="" style="height:auto;width:30px;margin: 5px 0 30px 0" /></a>
             <a href="https://se.linkedin.com/in/david-tranaeus-0834a7114" target="_blank"><img src="img/icons/linkedin.png" alt="" style="height:auto;width:30px;margin:5px 0 30px 0" /></a>
         </div>

@@ -418,6 +418,20 @@ https://codepen.io/brissmyr/pen/egidw
     position:relative;
 }
 
+.companyHeaderMenu{
+    border:3px solid #daede8;
+    border-radius:0px;
+    width:200px;
+    height:60px;
+    color:white;
+    margin: 0 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 0 20px;
+    cursor:pointer;
+}
+
 .studentHeaderMenu{
     border:3px solid #FFD521;
     border-radius:0px;
@@ -529,6 +543,12 @@ https://codepen.io/brissmyr/pen/egidw
     }
     #lunchLectureImgMobile{
         display:block;
+    }
+
+    .companyHeaderMenu{
+        border:2px solid #daede8;
+        height:40px;
+        margin: 0 30px;
     }
 
     .studentHeaderMenu{
