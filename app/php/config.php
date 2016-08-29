@@ -1,12 +1,21 @@
 <?php
-    // $hostname = 'mediasbranschdag-166397.mysql.binero.se';
-    // $username = '166397_lt74885';
-    // $password = 'Cxj75RZk56';
-    // $database = '166397-mediasbranschdag';
-    $hostname = 'localhost';
-    $username = 'root';
-    $password = 'root';
-    $database = 'mdb16';
+
+    $localConfig = false;
+
+    if($localConfig){
+        $hostname = 'localhost';
+        $username = 'root';
+        $password = 'root';
+        $database = 'mdb16';
+    }
+    else{
+        $hostname = 'mediasbranschdag-166397.mysql.binero.se';
+        $username = '166397_lt74885';
+        $password = 'Cxj75RZk56';
+        $database = '166397-mediasbranschdag';
+    }
+
+
 
     function queryDb($conn, $query){
 		if (($result = mysqli_query($conn, $query)) === false) {
@@ -26,5 +35,5 @@
 	    $conn->set_charset("utf8");
 	    return $conn;
 	}
-    
+
 ?>
