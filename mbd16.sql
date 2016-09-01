@@ -13,7 +13,7 @@ INSERT INTO team (name, position, email, linkedin, image) VALUES
 ('Niklas Gustavsson', 'Projektledare', 'niklas.gustavsson@mediasbranschdag.com','https://se.linkedin.com/in/niklas-gustavsson-2a6876104/sv','niklas.jpg'),
 ('Sabina von Essen', 'Ansvarig för Näringslivsgruppen', 'sabina.von.essen@mediasbranschdag.com','https://se.linkedin.com/in/sabina-von-essen-5bb976102','sabina.jpg'),
 ('Christian Abdelmassih', 'Företagskontakt', 'christian.abdelmassih@mediasbranschdag.com','https://se.linkedin.com/in/christianabdelmassih','christian.jpg'),
-('David Traeneus', 'Företagskontakt', 'david.traeneus@mediasbranschdag.com','https://se.linkedin.com/in/david-tranaeus-0834a7114','david.jpg'),
+('David Tranæus', 'Företagskontakt', 'david.tranaeus@mediasbranschdag.com','https://se.linkedin.com/in/david-tranaeus-0834a7114','david.jpg'),
 ('Marcus Hogler', 'Ansvarig för Kommunikationsgruppen', 'marcus.hogler@mediasbranschdag.com','','marcus.jpg'),
 ('Emil Westin', 'Webmaster', 'emil.westin@mediasbranschdag.com','https://se.linkedin.com/in/emil-westin-087376b5','emil.jpg'),
 ('Gabriella Sanches Karlsson', 'Kommunikation & PR', 'gabriella.s.karlsson@mediasbranschdag.com','https://se.linkedin.com/in/gabriella-sanchez-karlsson-784b2866','gabriella.jpg'),
