@@ -79,85 +79,85 @@ MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
         "surname":"Gustavsson",
         "position":"Projektledare",
         "mail":"niklas.gustavsson@mediasbranschdag.com",
-        "img":"img/profiles2/niklas.jpg"
+        "img":"img/profiles/niklas.jpg"
     },{
         "forename":"Emil",
         "surname":"Westin",
         "position":"Webmaster",
         "mail":"emil.westin@mediasbranschdag.com",
-        "img":"img/profiles2/emil.jpg"
+        "img":"img/profiles/emil.jpg"
     },{
         "forename":"Gabriella",
         "surname":"Sanchez Karlsson",
         "position":"Ansvarig för kommunikation och PR",
         "mail":"gabriella.s.karlsson@mediasbranschdag.com",
-        "img":"img/profiles2/gabriella.jpg"
+        "img":"img/profiles/gabriella.jpg"
     },{
         "forename":"Sabina",
         "surname":"von Essen",
         "position":"Gruppansvarig för Näringslivsgruppen",
         "mail":"sabina.v.essen@mediasbranschdag.com",
-        "img":"img/profiles2/sabina.jpg"
+        "img":"img/profiles/sabina.jpg"
     },{
         "forename":"David",
         "surname":"Tranaeus",
         "position":"Företagskontakt",
         "mail":"david.tranaeus@mediasbranschdag.com",
-        "img":"img/profiles2/david.jpg"
+        "img":"img/profiles/david.jpg"
     },{
         "forename":"Christian",
         "surname":"Abdelmassih",
         "position":"Företagskontakt",
         "mail":"christian.abdelmassih@mediasbranschdag.com",
-        "img":"img/profiles2/christian.jpg"
+        "img":"img/profiles/christian.jpg"
     },{
         "forename":"Emma",
         "surname":"Igelström",
         "position":"Logistikansvarig",
         "mail":"emma.igelstrom@mediasbranschdag.com",
-        "img":"img/profiles2/emmai.jpg"
+        "img":"img/profiles/emmai.jpg"
     },{
         "forename":"Evelina",
         "surname":"Hedberg",
         "position":"Sittningsansvarig",
         "mail":"evelina.hedberg@mediasbranschdag.com",
-        "img":"img/profiles2/evelina.jpg"
+        "img":"img/profiles/evelina.jpg"
     },{
         "forename":"Marcus",
         "surname":"Hogler",
         "position":"Gruppansvarig för Kommunikationsgruppen",
         "mail":"marcus.hogler@mediasbranschdag.com",
-        "img":"img/profiles2/marcus.jpg"
+        "img":"img/profiles/marcus.jpg"
     },{
         "forename":"Sofia",
         "surname":"Blomgren",
         "position":"Ansvarig för kommunikation och PR",
         "mail":"sofia.blomgren@mediasbranschdag.com",
-        "img":"img/profiles2/sofia.jpg"
+        "img":"img/profiles/sofia.jpg"
     },{
         "forename":"Beata",
         "surname":"von Grothusen",
         "position":"Sponsansvarig",
         "mail":"beata.v.grothusen@mediasbranschdag.com",
-        "img":"img/profiles2/beata.jpg"
+        "img":"img/profiles/beata.jpg"
     },{
         "forename":"Glenn",
         "surname":"Schmitz",
         "position":"Human Resources",
         "mail":"glenn.schmitz@mediasbranschdag.com",
-        "img":"img/profiles2/glenn.jpg"
+        "img":"img/profiles/glenn.jpg"
     },{
         "forename":"Linnea",
         "surname":"Lennartsson",
         "position":"Logistikansvarig",
         "mail":"linnéa.lennartsson@mediasbranschdag.com",
-        "img":"img/profiles2/linnea.jpg"
+        "img":"img/profiles/linnea.jpg"
     },{
         "forename":"Emma",
         "surname":"Olsson",
         "position":"Sittningsansvarig",
         "mail":"emma.olsson@mediasbranschdag.com",
-        "img":"img/profiles2/emmao.jpg"
+        "img":"img/profiles/emmao.jpg"
     }];
 
 });
