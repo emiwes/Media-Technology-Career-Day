@@ -320,6 +320,9 @@ input.myButton:focus {
     opacity: 0;
 }
 
+.hidden{
+    display:none;
+}
 #scrollTopButton.ng-hide-add, #scrollTopButton.ng-hide-remove{
     -webkit-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;

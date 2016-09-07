@@ -2,11 +2,11 @@
 
 </div>
 
-<h1 style="text-align:center;padding-top:50px">Projektgruppen</h1>
+<h1 id="teamSection" style="text-align:center;padding-top:50px">Projektgruppen</h1>
 <hr class="titleLine" style=""></hr>
 <div style="display:flex;flex-wrap:wrap;justify-content:center;padding:50px 0 0 0;max-width:1100px;margin: 0 auto">
     <div ng-repeat="person in getTeamMembers()" style="max-width:300px;height:auto;padding: 0 0;text-align:center" class="">
-        <img style="width:80%;height:auto;border-radius:50%;box-shadow: 0px 0px 20px -5px" ng-src="img/profiles2/{{person.image}}" alt="" />
+        <img style="width:80%;height:auto;border-radius:50%;box-shadow: 0px 0px 20px -5px" ng-src="img/profiles/{{person.image}}" alt="" />
         <h3 style="margin: 0px 0px">{{person.name}}</h3>
         <h4 style="margin: 0px 0px">{{person.position}}</h4>
         <a class="socialMediaLink" href="mailto:{{person.email}}"><img src="img/icons/mail_black_copy.png" alt="" style="height:auto;width:30px;margin: 5px 0 30px 0" /></a>
@@ -14,7 +14,7 @@
     </div>
 </div>
 <div class="" style="text-align:center;padding-bottom:50px">
-    Stort tack till <a href="#" style="color:#66907a">Linnea Holm</a> för porträtt och <a href="#" style="color:#66907a">Sofia Blomgren</a> för foto!
+    Stort tack till <a href="mailto:a.linnea.holm@gmail.com" style="color:#66907a">Linnea Holm</a> för porträtt och <a href="mailto:contact@sofiablomgren.com" style="color:#66907a">Sofia Blomgren</a> för foto!
 </div>
 
 <div class="" id="contactForm" style="background-color:#daede8;display:flex;flex-direction:column;justify-content:center;align-items:center;padding: 50px 15px">

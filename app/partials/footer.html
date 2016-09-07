@@ -2,7 +2,7 @@
     <!-- <h1 style="padding-top:50px;margin-top:0" class="">Samarbetspartners</h1>
     <hr class="titleLine" style=""></hr> -->
     <div class="" style="">
-        <a ng-repeat="company in getCompanies()" ng-href="http://{{company.website}}" target="_blank">
+        <a ng-class="{'hidden': !company.website}" ng-repeat="company in getCompanies()" ng-href="http://{{company.website}}" target="_blank">
             <img ng-src="img/companies/{{company.logo}}" style="max-height:100px;max-width:200px;display:inline-block;vertical-align:middle;margin:20px" />
         </a>
     </div>

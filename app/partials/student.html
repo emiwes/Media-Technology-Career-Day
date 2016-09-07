@@ -1,7 +1,7 @@
 <div style="height:450px;background:url(img/background/flowers3.jpg) no-repeat center; background-size:cover;position:relative">
     <div class="" style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);"></div>
     <div class="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;height:100%;z-index:1;position:relative">
-        <div ng-click="scrollTo('#companySection')" class="studentHeaderMenu" style=""><h2>Företagen</h2></div>
+        <div ng-click="scrollTo('#companySection')" class="studentHeaderMenu" style=""><h2>Utställare</h2></div>
         <div ng-click="scrollTo('#lunchLecture')" class="studentHeaderMenu" style=""><h2>Lunchföreläsningar</h2></div>
         <div ng-click="scrollTo('#partySection')" class="studentHeaderMenu" style=""><h2>Sittningen</h2></div>
     </div>
@@ -10,7 +10,7 @@
 
 <div id="companySection" class="">
     <div class="companyMobile" style="">
-        <h1>Företagen</h1>
+        <h1>Utställare</h1>
         <hr class="titleLine" style=""></hr>
 
         <div class="" style="display:flex;flex-direction:column;width:100%;">
@@ -44,16 +44,16 @@
     </div>
 
     <div class="companyDesktop" style="">
-        <h1>Företagen</h1>
+        <h1>Utställare</h1>
         <hr class="titleLine" style=""></hr>
-        <div class="" id="contentWrapper" style="min-height:410px;background-color:white;padding:20px 3% 40px 3%;display:flex;flex-direction:column;position:relative;">
+        <div class="" id="contentWrapper" style="min-height:410px;background-color:white;padding:20px 3% 20px 3%;display:flex;flex-direction:column;position:relative;">
             <div ng-click="incrementIndex(1)" class="" style="cursor:pointer;border-top:2px solid;border-right:2px solid;width:40px;height:40px;transform:rotate(45deg);position:absolute;right:30px;top:calc(50% - 42px);z-index:1000"></div>
             <div ng-click="incrementIndex(-1)" class="" style="cursor:pointer;border-top:2px solid;border-left:2px solid;width:40px;height:40px;transform:rotate(-45deg);position:absolute;left:30px;top:calc(50% - 42px);z-index:1000"></div>
             <h1 style="margin:15px 0 0 50px">{{name}}</h1>
             <div class="" style="display:flex;margin-left:50px;">
                 <div style="width:60%;">
                     <p style="width:100%;text-align:justify;white-space: pre-line">{{description}}</p>
-                    <a class="myButton whiteText" style="background-color:black" ng-href="http://{{website}}" target="_blank">Läs mer!</a>
+                    <a ng-class="{'hidden': !website}" class="myButton whiteText" style="background-color:black" ng-href="http://{{website}}" target="_blank">Läs mer!</a>
                 </div>
                 <div class="" style="width:40%;background-color:#fff;position:relative;">
                     <img ng-src="img/companies/{{image}}" alt="" style="max-width:50%;max-height:150px;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;"/>
