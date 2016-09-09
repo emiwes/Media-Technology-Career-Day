@@ -1,4 +1,4 @@
-<div style="height:450px;background:url(img/background/flowers3.jpg) no-repeat center; background-size:cover;position:relative">
+<div class="bannerHeader" style="background-image:url(img/background/flowers3.jpg);">
     <div class="" style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);"></div>
     <div class="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;height:100%;z-index:1;position:relative">
         <div ng-click="scrollTo('#companySection')" class="studentHeaderMenu" style=""><h2>Utställare</h2></div>
@@ -11,7 +11,7 @@
 <div id="companySection" class="">
     <div class="companyMobile" style="">
         <h1>Utställare</h1>
-        <hr class="titleLine" style=""></hr>
+        <hr class="titleLineBlack" style=""></hr>
 
         <div class="" style="display:flex;flex-direction:column;width:100%;">
 
@@ -32,7 +32,7 @@
                             {{company.description}}
                         </p>
                         <div class="" style="text-align:left">
-                            <a class="myButton whiteText" style="background-color:black" ng-href="http://{{company.website}}" target="_blank">Läs Mer!</a>
+                            <a ng-class="{'hidden': !website}" class="myButton whiteText" style="background-color:black" ng-href="http://{{company.website}}" target="_blank">Läs Mer!</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
 
     <div class="companyDesktop" style="">
         <h1>Utställare</h1>
-        <hr class="titleLine" style=""></hr>
+        <hr class="titleLineBlack" style=""></hr>
         <div class="" id="contentWrapper" style="min-height:410px;background-color:white;padding:20px 3% 20px 3%;display:flex;flex-direction:column;position:relative;">
             <div ng-click="incrementIndex(1)" class="" style="cursor:pointer;border-top:2px solid;border-right:2px solid;width:40px;height:40px;transform:rotate(45deg);position:absolute;right:30px;top:calc(50% - 42px);z-index:1000"></div>
             <div ng-click="incrementIndex(-1)" class="" style="cursor:pointer;border-top:2px solid;border-left:2px solid;width:40px;height:40px;transform:rotate(-45deg);position:absolute;left:30px;top:calc(50% - 42px);z-index:1000"></div>
@@ -99,7 +99,7 @@
 <div style="display:flex">
     <div id="lunchLecture" style="padding: 50px 15px 0 15px">
         <h1 style="text-align:center">Lunchföreläsningar</h1>
-        <div class="titleLine" style="margin: 0 auto"></div>
+        <div class="titleLineBlack" style="margin: 0 auto"></div>
         <div class="" style="max-width: 600px;height:400px; display:flex; flex-direction: column; align-items: flex-start;justify-content:space-around;margin:0 auto">
             <div class="" style="display:flex;align-items:center;width:100%;justify-content:space-between">
                 <div class="">
@@ -144,7 +144,7 @@
 
 <div id="partySection" class="" style="background-color:#daede8;padding: 50px 15px;">
     <h1 style="text-align:center">Sittningen</h1>
-    <div class="titleLine" style="margin: 0 auto"></div>
+    <div class="titleLineBlack" style="margin: 0 auto"></div>
     <div class="" style="min-height:300px;display:flex;justify-content:center;align-items:center">
         <!-- <h1 style="0">Info kommer inom kort!</h1> -->
         <div class="" style="white-space:pre-line;max-width:800px;text-align:justify;font-size:14px">

@@ -1,7 +1,7 @@
 <?php
     $mailContent = json_decode($_GET["mailContent"], TRUE);
 
-    $to = "emil.westin1@gmail.com";
+    $to = "branschdag@medieteknik.com";
 
 	$subject = $mailContent['subject'];
     $name = $mailContent['name'];
