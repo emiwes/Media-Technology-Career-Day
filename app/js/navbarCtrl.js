@@ -1,5 +1,4 @@
 MBDApp.controller('NavbarCtrl', function($scope, MBDModel, $route, $window) {
-    console.log("NAVBAR controller is initiated!");
     var body = document.getElementById('body');
 
     $scope.route = $route;

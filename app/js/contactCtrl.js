@@ -1,6 +1,4 @@
 MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
-    console.log('CONTACT controller is instantiated!');
-
     $scope.successMessage = "";
     var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
     var pattern = new RegExp(email_regex);
@@ -19,8 +17,6 @@ MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
 
     $scope.getTeamMembers = function(){
         var members = MBDModel.getTeamMembers();
-        console.log("fetching members to Controller");
-        console.log(members);
 		return members;
 	};
 
@@ -42,8 +38,7 @@ MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
         	    };
 
                 $http(request).success(function(data){
-                    console.log(data);
-        	    	console.log("success!");
+        	    	console.log("Sending mail was a success!");
                     $scope.name = "";
                     $scope.email = "";
                     $scope.subject = "";
@@ -73,91 +68,5 @@ MBDApp.controller('ContactCtrl', function($scope, MBDModel, $http) {
             }
         }
     };
-
-    $scope.groupMembers = [{
-        "forename":"Niklas",
-        "surname":"Gustavsson",
-        "position":"Projektledare",
-        "mail":"niklas.gustavsson@mediasbranschdag.com",
-        "img":"img/profiles/niklas.jpg"
-    },{
-        "forename":"Emil",
-        "surname":"Westin",
-        "position":"Webmaster",
-        "mail":"emil.westin@mediasbranschdag.com",
-        "img":"img/profiles/emil.jpg"
-    },{
-        "forename":"Gabriella",
-        "surname":"Sanchez Karlsson",
-        "position":"Ansvarig för kommunikation och PR",
-        "mail":"gabriella.s.karlsson@mediasbranschdag.com",
-        "img":"img/profiles/gabriella.jpg"
-    },{
-        "forename":"Sabina",
-        "surname":"von Essen",
-        "position":"Gruppansvarig för Näringslivsgruppen",
-        "mail":"sabina.v.essen@mediasbranschdag.com",
-        "img":"img/profiles/sabina.jpg"
-    },{
-        "forename":"David",
-        "surname":"Tranaeus",
-        "position":"Företagskontakt",
-        "mail":"david.tranaeus@mediasbranschdag.com",
-        "img":"img/profiles/david.jpg"
-    },{
-        "forename":"Christian",
-        "surname":"Abdelmassih",
-        "position":"Företagskontakt",
-        "mail":"christian.abdelmassih@mediasbranschdag.com",
-        "img":"img/profiles/christian.jpg"
-    },{
-        "forename":"Emma",
-        "surname":"Igelström",
-        "position":"Logistikansvarig",
-        "mail":"emma.igelstrom@mediasbranschdag.com",
-        "img":"img/profiles/emmai.jpg"
-    },{
-        "forename":"Evelina",
-        "surname":"Hedberg",
-        "position":"Sittningsansvarig",
-        "mail":"evelina.hedberg@mediasbranschdag.com",
-        "img":"img/profiles/evelina.jpg"
-    },{
-        "forename":"Marcus",
-        "surname":"Hogler",
-        "position":"Gruppansvarig för Kommunikationsgruppen",
-        "mail":"marcus.hogler@mediasbranschdag.com",
-        "img":"img/profiles/marcus.jpg"
-    },{
-        "forename":"Sofia",
-        "surname":"Blomgren",
-        "position":"Ansvarig för kommunikation och PR",
-        "mail":"sofia.blomgren@mediasbranschdag.com",
-        "img":"img/profiles/sofia.jpg"
-    },{
-        "forename":"Beata",
-        "surname":"von Grothusen",
-        "position":"Sponsansvarig",
-        "mail":"beata.v.grothusen@mediasbranschdag.com",
-        "img":"img/profiles/beata.jpg"
-    },{
-        "forename":"Glenn",
-        "surname":"Schmitz",
-        "position":"Human Resources",
-        "mail":"glenn.schmitz@mediasbranschdag.com",
-        "img":"img/profiles/glenn.jpg"
-    },{
-        "forename":"Linnea",
-        "surname":"Lennartsson",
-        "position":"Logistikansvarig",
-        "mail":"linnéa.lennartsson@mediasbranschdag.com",
-        "img":"img/profiles/linnea.jpg"
-    },{
-        "forename":"Emma",
-        "surname":"Olsson",
-        "position":"Sittningsansvarig",
-        "mail":"emma.olsson@mediasbranschdag.com",
-        "img":"img/profiles/emmao.jpg"
-    }];
 
 });

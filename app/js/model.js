@@ -1,6 +1,4 @@
 MBDApp.factory('MBDModel', function ($http) {
-    console.log("MODEL is instantiated!");
-
     var li = true;
     var instagramPosts;
     var teamMembers;

@@ -1,5 +1,4 @@
 var MBDApp = angular.module('MBDApp', ['ngRoute', 'ngResource', 'ngAnimate']);
-console.log('APP is instantiated');
 
 MBDApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.

@@ -1,6 +1,4 @@
 MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
-    console.log("Student controller is initiated!");
-
     var navbarHeight = 75;
     var companies = [];
 
