@@ -6,7 +6,6 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
         if(companies.length < 1){
             companies = MBDModel.getCompanies();
             if (companies === undefined) {
-                console.log('<<< COMPANIES ARE NOW UNDEFINED >>>');
                 companies = [];
                 return companies;
             }
@@ -23,7 +22,6 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
         }
         else{
             $scope.clickedCompany = companyName;
-            console.log(companyName);
             $timeout(function(){
                 $('html, body').animate({
                     scrollTop: $('#' + companyName).offset().top - navbarHeight - 15
@@ -52,7 +50,6 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
     };
 
     $scope.scrollTo = function(id){
-        console.log(id);
         $("html, body").animate({
             scrollTop: $(id).offset().top - navbarHeight
         }, 1000);
@@ -79,9 +76,4 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
         }
         $scope.$digest();
     });
-
-
-    //getCompanies();
-    //$scope.name = $scope.companies[0].name;
-    //$scope.image = $scope.companies[0].image;
 });

@@ -300,8 +300,7 @@ input.myButton:focus {
     margin: 0 auto 50px auto;
 }
 .companyContent{
-    max-height: 1000px;
-    /*background-color:white;*/
+    max-height: 1500px;
     width:100%;
     margin:0 auto;
     position:relative;
