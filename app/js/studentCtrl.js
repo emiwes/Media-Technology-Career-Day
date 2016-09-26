@@ -26,7 +26,7 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
                 $('html, body').animate({
                     scrollTop: $('#' + companyName).offset().top - navbarHeight - 15
                 });
-            }, 300);
+            }, 400);
         }
     };
 

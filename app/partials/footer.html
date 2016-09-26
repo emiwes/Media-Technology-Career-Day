@@ -1,9 +1,9 @@
 <div class="" style="background-color:rgb(246,246,246);text-align:center;padding:50px 15px;">
     <!-- <h1 style="padding-top:50px;margin-top:0" class="">Samarbetspartners</h1>
     <hr class="titleLineBlack" style=""></hr> -->
-    <div class="" style="">
+    <div class="" style="max-width:1100px; margin: 0 auto">
         <a ng-class="{'hidden': !company.website}" ng-repeat="company in getCompanies()" ng-href="http://{{company.website}}" target="_blank">
-            <img ng-src="img/companies/{{company.logo}}" style="max-height:100px;max-width:200px;display:inline-block;vertical-align:middle;margin:20px" />
+            <img class="companyFooterIcon" ng-src="img/companies/{{company.logo}}" style="" />
         </a>
     </div>
 </div>
