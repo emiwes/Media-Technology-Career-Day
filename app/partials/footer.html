@@ -2,9 +2,15 @@
     <!-- <h1 style="padding-top:50px;margin-top:0" class="">Samarbetspartners</h1>
     <hr class="titleLineBlack" style=""></hr> -->
     <div class="" style="max-width:1100px; margin: 0 auto">
-        <a ng-class="{'hidden': !company.website}" ng-repeat="company in getCompanies()" ng-href="http://{{company.website}}" target="_blank">
-            <img class="companyFooterIcon" ng-src="img/companies/{{company.logo}}" style="" />
-        </a>
+        <div class="" ng-repeat="company in getCompanies()" style="display:inline;">
+            <a ng-class="{'hidden': !company.website}" ng-href="http://{{company.website}}" target="_blank">
+                <img class="companyFooterIcon" ng-src="img/companies/{{company.logo}}" style="" />
+            </a>
+            <a ng-if="company.logo == 'dice.png'" ng-class="{'hidden': !company.website}" ng-href="http://www.ea.com" target="_blank">
+                <img class="companyFooterIcon" ng-src="img/companies/ea.png" style="" />
+            </a>
+        </div>
+
     </div>
 </div>
 
