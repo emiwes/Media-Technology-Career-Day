@@ -34,7 +34,7 @@
 
                     <div class="" style="width:100%;height:100%;margin:10px 20px">
                         <h1 style="">{{company.name}}</h1>
-                        <p style="text-align:justify;white-space:pre-line">{{company.description}}</p>
+                        <p style="white-space:pre-line">{{company.description}}</p>
                         <div class="" style="text-align:left">
                             <a ng-class="{'hidden': !company.website}" class="myButton whiteText" style="background-color:black" ng-href="http://{{company.website}}" target="_blank">Läs Mer!</a>
                         </div>
@@ -56,7 +56,7 @@
             <h1 style="margin:15px 0 0 50px">{{name}}</h1>
             <div class="" style="display:flex;margin-left:50px;">
                 <div style="width:60%;">
-                    <p style="width:100%;text-align:justify;white-space: pre-wrap">{{description}}</p>
+                    <p style="width:100%;white-space: pre-wrap">{{description}}</p>
                     <a ng-class="{'hidden': !website}" class="myButton whiteText" style="background-color:black" ng-href="http://{{website}}" target="_blank">Läs mer!</a>
                 </div>
 
@@ -103,9 +103,6 @@
     </div>
 </div>
 
-<!-- <div id="lunchLectureImgMobile" style="">
-    <div style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)"></div>
-</div> -->
 <div style="display:flex">
     <div id="lunchLecture" style="padding: 50px 15px 0 15px">
         <h1 style="text-align:center">Lunchföreläsningar</h1>
@@ -146,18 +143,13 @@
             </div>
         </div>
     </div>
-    <!-- <div id="lunchLectureImgDesktop" style="">
-        <div style="position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)"></div>
-        <img style="width:150px;height:auto;position:absolute;z-index:2;left:calc(50% - 75px);top:calc(50% - 75px)" src="img/icons/lecture2.png" alt="" />
-    </div> -->
 </div>
 
 <div id="partySection" class="" style="background-color:#daede8;padding: 50px 15px;">
     <h1 style="text-align:center">Sittningen</h1>
     <div class="titleLineBlack" style="margin: 0 auto"></div>
     <div class="" style="min-height:300px;display:flex;justify-content:center;align-items:center">
-        <!-- <h1 style="0">Info kommer inom kort!</h1> -->
-        <div class="" style="white-space:pre-line;max-width:800px;text-align:justify;font-size:14px">
+        <div class="" style="white-space:pre-line;max-width:800px;font-size:14px">
             Medias Branschdag kommer att avrundas med en sittning där företag och studenter får chansen att utveckla samtal om framtiden mer på djupet. Detta är en utmärkt möjlighet för företag att ta del av Medietekniks många traditioner och lära känna potentiella framtida kollegor på ett mer ledigt plan.
 
             Sittningen kommer även vara ett ypperligt tillfälle för studenter att få marknadsföra sig själva som civilingenjörer. Vi ser fram emot att få anordna en spektakulär kväll och vi hoppas att ni är lika upprymda som vi är!
