@@ -4,11 +4,17 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
 
     $scope.getCompanies = function(){
         if(companies.length < 1){
-            companies = MBDModel.getCompanies();
+            // Slicing the return so that referencing to original array will be removed.
+            companies = MBDModel.getCompanies().slice();
             if (companies === undefined) {
                 companies = [];
                 return companies;
             }
+
+            // Removing Netlight from companylist. It should not be presented.
+            var removeIndex = companies.map(function(item) { return item.id; }).indexOf("netlight");
+            companies.splice(removeIndex, 1);
+
             var randomIndex = Math.floor(Math.random()*companies.length);
             $scope.number = randomIndex;
             setCompany(randomIndex);
