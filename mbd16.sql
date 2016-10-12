@@ -1,6 +1,4 @@
 DROP TABLE team;
-DROP TABLE companies;
-
 CREATE TABLE team (
     name VARCHAR(255) NOT NULL,
     position VARCHAR(255) NOT NULL,
@@ -25,7 +23,31 @@ INSERT INTO team (name, position, email, linkedin, image) VALUES
 ('Linnéa Lennartsson', 'Logistikansvarig', 'linnea.lennartsson@mediasbranschdag.com','https://se.linkedin.com/in/linnéa-lennartsson-798251a5','linnea.jpg'),
 ('Emma Igelström', 'Logistikansvarig', 'emma.igelstrom@mediasbranschdag.com','','emmai.jpg');
 
+DROP TABLE schedule;
+CREATE TABLE schedule (
+    type VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(255),
+    day VARCHAR(255) NOT NULL,
+    duration VARCHAR(255) NOT NUll,
+    location VARCHAR(255) NOT NULL
+) ENGINE = InnoDB;
 
+INSERT INTO schedule (type, title, description, day, duration, location) VALUES
+("Lunchföreläsning", "River", "Digitalbyrån River håller lunchföreläsning.", "31 Okt", "12:15-13:00", "B3"),
+("Lunchföreläsning", "Netlight", "Konsultföretaget Netlight håller lunchföreläsning.", "1 Nov", "12:15-13:00", "B3"),
+("Lunchföreläsning", "Schibsted", "Mediekoncernen Schibsted håller lunchföreläsning.", "2 Nov", "12:15-13:00", "B3"),
+
+("Mässan Öppnar", "MBD 2016", "Dörrarna öppnas till Medias Branschdag 2016. Det kommer finnas möjlighet att besöka mässan fram till stänging klockan 17.00.", "3 Nov", "10:00-17:00", "Nymble"),
+("Inspirerande tal", "Tobias Rundbom", "Medgrundare och chef på Prototyp Tobias håller ett inspererande tal på stora scenen.", "3 Nov", "11:15-12:00", "Nymble"),
+("Tal", "Monika Hanson", "Grundare av Branschdagen i Medieteknik och Head of Innovation på Viaplay berättar om sin resa efter examen.", "3 Nov", "13:15-14:00", "Nymble"),
+("Tal", "Donnie Lygonis", "Från KTHs egna företagsinkubator, KTH Innovation kommer Donnie och berättar kring startup-kulturen och sin roll som coach.", "3 Nov", "15:15-16:00", "Nymble"),
+("Mässan Stänger", "MBD 2016", "Medias Branschdag stänger.", "3 Nov", "17:00", "Nymble"),
+
+("Afterwork", "Afterwork i META", "Afterworken öppnar i vår sektionslokal META under mässans sista timme. Det är ett perfekt tillfälle att ta det lugnt efter mässan och mingla innan middagssittningen börjar. Den är öppen för studenter och representanter från företagen som deltagit på mässan.", "3 Nov", "17:01-18:00", "META"),
+("Gasque", "Branschdagssittningen", "Sittningen öppnar dörrarna!", "3 Nov", "18:00", "Stora Gasque");
+
+DROP TABLE companies;
 CREATE TABLE companies(
     id VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
@@ -53,4 +75,5 @@ INSERT INTO companies (id, name, description, logo, website) VALUES
 ('dice', 'EA/Dice', 'We are EA/DICE!\n\nWe entertain millions of people across the globe with the most amazing and immersive interactive software in the industry. But making games is hard work. That’s why we employ the most creative, passionate people in the industry.\n\nEA/DICE (EA Digital Illusions Creative Entertainment), the award-winning developer based in Stockholm, Sweden, is best known for creating the phenomenally successful Battlefield franchise. We are also the home of Star Wars Battlefront and Mirrors Edge: Catalyst.', 'dice.png','www.dice.se/'),
 ('viaplay', 'Viaplay', 'Viaplay is the leading online service for TV, film and sports in the Nordic countries and part of the Modern Times Group, an international entertainment group listed on the Nasdaq OMX Nordics Large Cap.\n\nWe offer the most popular TV series, a vast international movie catalogue and a world-class selection of live sports events including Premiere League, Champions League, NHL and the Rio Summer Olympics.\n\nWe put our hearts into creating beautiful product experiences, and invest every dollar that we can spare into new exciting content formats. Our passion for technology, software development and streaming delivery is unprecedented. Whether you are into sales, marketing, content production, product design or software development we have great problems to solve and new opportunities to capture. Join us and help transform the world of entertainment!', 'viaplay.png', 'www.viaplay.se/jobs'),
 ('ooyala', 'Ooyala', "Ooyala is a global technology company delivering online video solutions and services. We are on a mission to revolutionize digital TV - end-to-end and at a global scale. That requires taking on some very interesting technical challenges, spread across Media Logistics, Video Publishing, Video Advertising and large scala Data Analytics.\n\nOoyala Stockholm\nThe Stockholm office is Ooyala's third biggest office (after Silicon Valley and London) and is home turf to everything ad-tech.\n\nMore than 2/3 of the 80+ strong Stockholm crew work in R&D making Stockholm is one of Ooyala's core engineering hubs. The complexity and scale involved in running a global ad-serving platform makes Stockholm an innovation center not only for advertizing technology but also for Ooyala's infrastructure management, data pipelines and core analytics.", 'ooyala.png', 'www.ooyala.com'),
+('safemind', 'Safemind', 'Vi rekryterar digitala team med det bästa nätverket i Sverige. Vi är specialister på att rekrytera personal till tjänster där IT, teknik och media står i fokus. Det gäller både tjänster som kräver djupa tekniska kunskaper såväl som sälj- och marknadsroller där teknik är en viktig del av erbjudandet.\n\nFör oss handlar rekrytering om att förstå människors drivkrafter och kompetenser och matcha dessa mot våra kunders föränderliga vardag, oftast i en digital context. Att identifiera och tillsätta nyckelpersoner som gör en verklig skillnad är det vi tycker är allra roligast! Med den allt tuffare konkurrensen om de allra bästa kandidaterna är ett väl upparbetat nätverk nyckeln till att snabbt hitta rätt kompetens.\n\nVi har haft förmånen att hjälpa många av de mest framgångsrika techbolagen i sina tillväxtresor från startup till börsintroduktioner, och bra utmaningar lockar de smartaste kandidaterna och bra kandidater lockar de roligaste bolagen.\n\nVi skulle kunna berätta ännu mer om oss själva men föredrar faktiskt att berätta om våra kunder. Vi har haft förmånen att arbeta med några av världens mest framsynta bolag och det tycker vi väger tyngre än ord: King, Spotify, DICE, Tobii, PriceRunner, Fishbrain, SEB, Viaplay, NetEnt, FEO Media, Hemnet och Folksam för att nämna några.\n\nVåra lediga tjänster, och mycket mer, hittar du på vår hemsida:', 'safemind.png', 'www.safemind.se'),
 ('zhelp', 'Ser det tomt ut?', 'Oroa dig inte.\n\nUnder hösten kommer fler spännande företag att presenteras här. Så kika in på sidan med jämna mellanrum för att hålla dig uppdaterad om din nästa potentiella arbetsgivare!', 'help.png', "");
