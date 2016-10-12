@@ -3,6 +3,7 @@ MBDApp.factory('MBDModel', function ($http) {
     var instagramPosts;
     var teamMembers;
     var companies;
+    var schedule;
 
     this.getNavbarOptions = function(){
         return [
@@ -27,6 +28,14 @@ MBDApp.factory('MBDModel', function ($http) {
         companies = response.data;
     }, function(error){
         console.log("Could not fetch companies");
+        console.log(error);
+    });
+
+    $http.get("php/getSchedule.php").then( function(response){
+        console.log("Fetching schedule was a success!");
+        schedule = response.data;
+    }, function(error){
+        console.log("Could not fetch schedule");
         console.log(error);
     });
 
@@ -57,6 +66,10 @@ MBDApp.factory('MBDModel', function ($http) {
 
     this.getCompanies = function(){
         return companies;
+    };
+
+    this.getSchedule = function(){
+        return schedule;
     };
 
     return this;

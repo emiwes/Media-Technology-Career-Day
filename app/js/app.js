@@ -19,7 +19,7 @@ MBDApp.config(['$routeProvider', function($routeProvider) {
     }).
     when('/schedule', {
         templateUrl: 'partials/schema.html',
-        // controller: 'SchemaCtrl'
+        controller: 'ScheduleCtrl',
         activeTab: 'schedule'
     }).
     when('/contact', {
