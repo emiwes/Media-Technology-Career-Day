@@ -18,7 +18,7 @@
                 </p>
                 <div class="" style="background-color:rgb(55,55,56);margin:0 -10px -10px -10px;color:white;padding:5px;">
                     <div class="" style="display:inline-block;margin:0 5px"><img src="img/icons/time.png" alt="" style="width:20px;height:auto;display:inline-block;vertical-align:bottom"/> {{event.duration}}</div>
-                    <div class="" style="display:inline-block;margin:0 5px"><img src="img/icons/location.png" alt=""  style="width:20px; height:auto;display:inline-block;vertical-align:bottom"/> {{event.location}}</div>
+                    <div class="" style="display:inline-block;margin:0 5px"><img src="img/icons/location.png" alt="" style="width:20px; height:auto;display:inline-block;vertical-align:bottom"/> {{event.location}} <a ng-if="event.locationlink" target="_blank" style="vertical-align:middle" ng-href="http://{{event.locationlink}}"><img style="width:15px;" src="img/icons/link.svg" alt="" /></a></div>
                 </div>
             </div>
         </div>

@@ -14,6 +14,8 @@
             $event['day'] = $row->day;
             $event['duration'] = $row->duration;
             $event['location'] = $row->location;
+            $event['locationlink'] = $row->locationlink;
+            $event['signuplink'] = $row->signuplink;
             array_push($schedule, $event);
         }
     } else {

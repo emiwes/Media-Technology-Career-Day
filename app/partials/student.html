@@ -108,35 +108,19 @@
         <h1 style="text-align:center">Lunchföreläsningar</h1>
         <div class="titleLineBlack" style="margin: 0 auto"></div>
         <div class="" style="max-width: 600px;height:400px; display:flex; flex-direction: column; align-items: flex-start;justify-content:space-around;margin:0 auto">
-            <div class="" style="display:flex;align-items:center;width:100%;justify-content:space-between">
+
+            <div ng-repeat="lecture in getLunchLectures()" class="" style="display:flex;align-items:center;width:100%;justify-content:space-between">
                 <div class="">
                     <h2 class="" style="margin-top: 0">
-                        River
+                        {{lecture.title}}
                     </h2>
                     <div class="" style="">
-                        TBA
+                        {{lecture.day}}
                     </div>
-                </div>
-                <a href="#" class="myButton" style="background-color:#daede8;" onclick="return false;">Anmäl</a>
-            </div>
-            <div class="" style="display:flex;align-items:center;width:100%;justify-content:space-between">
-                <div class="">
-                    <h2 class="" style="margin-top: 0">
-                        Netlight
-                    </h2>
                     <div class="" style="">
-                        TBA
-                    </div>
-                </div>
-                <a href="#" class="myButton" style="background-color:#daede8;" onclick="return false;">Anmäl</a>
-            </div>
-            <div class="" style="display:flex;align-items:center;width:100%;justify-content:space-between">
-                <div class="">
-                    <h2 class="" style="margin-top: 0">
-                        Schibsted
-                    </h2>
-                    <div class="" style="">
-                        TBA
+                        <img src="img/icons/time_black.png" style="width:20px;vertical-align:middle;" alt="" /> {{lecture.duration}}
+                        <img src="img/icons/location_black.png" style="width:20px;vertical-align:middle;margin:0 5px" alt="" />{{lecture.location}}
+                        <a target="_blank" style="vertical-align:middle" ng-href="http://{{lecture.locationlink}}"><img style="width:15px;" src="img/icons/link.svg" alt="" /></a>
                     </div>
                 </div>
                 <a href="#" class="myButton" style="background-color:#daede8;" onclick="return false;">Anmäl</a>

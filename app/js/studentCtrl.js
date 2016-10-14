@@ -82,4 +82,11 @@ MBDApp.controller('StudentCtrl', function($scope, MBDModel, $route, $timeout) {
         }
         $scope.$digest();
     });
+
+    $scope.getLunchLectures = function(){
+        return MBDModel.getLunchLectures();
+    };
+
+
+
 });

@@ -4,6 +4,7 @@ MBDApp.factory('MBDModel', function ($http) {
     var teamMembers;
     var companies;
     var schedule;
+    var lunchLectures;
 
     this.getNavbarOptions = function(){
         return [
@@ -34,6 +35,9 @@ MBDApp.factory('MBDModel', function ($http) {
     $http.get("php/getSchedule.php").then( function(response){
         console.log("Fetching schedule was a success!");
         schedule = response.data;
+
+        lunchLectures = schedule.filter(function( obj ) { return obj.type == "Lunchföreläsning";});
+
     }, function(error){
         console.log("Could not fetch schedule");
         console.log(error);
@@ -70,6 +74,10 @@ MBDApp.factory('MBDModel', function ($http) {
 
     this.getSchedule = function(){
         return schedule;
+    };
+
+    this.getLunchLectures = function(){
+        return lunchLectures;
     };
 
     return this;
