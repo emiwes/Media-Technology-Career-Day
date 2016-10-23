@@ -1,12 +1,16 @@
 MBDApp.controller('ScheduleCtrl', function($scope, MBDModel) {
-    var schedule = MBDModel.getSchedule();
-
 
     $scope.getSchedule = function(){
+
+        var schedule = MBDModel.getSchedule();
+        if(schedule){
+            $scope.getNearestEvent(schedule);
+        }
         return schedule;
     };
 
-    $scope.getNearestEvent = function(){
+    $scope.getNearestEvent = function(schedule){
+
         var closestEvent = 0;
         var today = new Date();
 
@@ -25,7 +29,5 @@ MBDApp.controller('ScheduleCtrl', function($scope, MBDModel) {
             }
         }
     };
-
-    $scope.getNearestEvent();
 
 });
