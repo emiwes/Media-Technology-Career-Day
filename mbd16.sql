@@ -36,17 +36,17 @@ CREATE TABLE schedule (
 ) ENGINE = InnoDB;
 
 INSERT INTO schedule (type, title, description, day, duration, location, locationlink, signuplink) VALUES
-("Lunchföreläsning", "River", "Digitalbyrån River håller lunchföreläsning.", "31 Okt", "12:15-13:00", "B3", 'www.kth.se/places/room/id/79cef4d7-7d64-4688-bd80-9d4c1d441680', ''),
-("Lunchföreläsning", "Netlight", "Konsultföretaget Netlight håller lunchföreläsning.", "1 Nov", "12:15-13:00", "B3", 'www.kth.se/places/room/id/79cef4d7-7d64-4688-bd80-9d4c1d441680', ''),
-("Lunchföreläsning", "Schibsted", "Mediekoncernen Schibsted håller lunchföreläsning.", "2 Nov", "12:15-13:00", "B3", 'www.kth.se/places/room/id/79cef4d7-7d64-4688-bd80-9d4c1d441680', ''),
+("Lunchföreläsning", "River", "Digitalbyrån River håller lunchföreläsning.", "31 Okt", "12:15-13:00", "B3", 'www.kth.se/places/room/id/79cef4d7-7d64-4688-bd80-9d4c1d441680', 'www.goo.gl/forms/Ahl4QHclnMCJ2XT73'),
+("Lunchföreläsning", "Netlight", "Konsultföretaget Netlight håller lunchföreläsning.", "1 Nov", "12:15-13:00", "B3", 'www.kth.se/places/room/id/79cef4d7-7d64-4688-bd80-9d4c1d441680', 'www.goo.gl/forms/IbaPci5qRpkSxjq62'),
+("Lunchföreläsning", "Schibsted", "Mediekoncernen Schibsted håller lunchföreläsning.", "2 Nov", "12:15-13:00", "B3", 'www.kth.se/places/room/id/79cef4d7-7d64-4688-bd80-9d4c1d441680', 'www.goo.gl/forms/1WwtEoHaMlCTwW0Y2'),
 
 ("Mässan Öppnar", "MBD 2016", "Dörrarna öppnas till Medias Branschdag 2016. Det kommer finnas möjlighet att besöka mässan fram till stänging klockan 17.00.", "3 Nov", "10:00-17:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
-("Inspiration", "Tobias Rundbom", "Medgrundare och chef på Prototyp Tobias håller ett inspererande tal på stora scenen.", "3 Nov", "11:15-12:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
+("Inspiration", "Tobias Rundbom", "Tobias Rundbom, medgrundare och chef på Prototyp, håller ett inspererande tal på stora scenen.", "3 Nov", "11:15-12:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
 ("Karriär", "Monika Hanson", "Grundare av Branschdagen i Medieteknik och Head of Innovation på Viaplay berättar om sin resa efter examen.", "3 Nov", "13:15-14:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
 ("Entrepenörskap", "Donnie Lygonis", "Från KTHs egna företagsinkubator, KTH Innovation kommer Donnie och berättar kring startup-kulturen och sin roll som coach.", "3 Nov", "15:15-16:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
+("Afterwork i META", "MBD 2016", "Afterworken öppnar i vår sektionslokal META under mässans sista timme. Det är ett perfekt tillfälle att ta det lugnt efter mässan och mingla innan middagssittningen börjar. Den är öppen för studenter och representanter från företagen som deltagit på mässan.", "3 Nov", "16:00-18:00", "META", null, null),
 ("Mässan Stänger", "MBD 2016", "Medias Branschdag stänger.", "3 Nov", "17:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
 
-("Afterwork", "Afterwork i META", "Afterworken öppnar i vår sektionslokal META under mässans sista timme. Det är ett perfekt tillfälle att ta det lugnt efter mässan och mingla innan middagssittningen börjar. Den är öppen för studenter och representanter från företagen som deltagit på mässan.", "3 Nov", "16:00-18:00", "META", null, null),
 ("Gasque", "Branschdagssittningen", "Sittningen öppnar dörrarna!", "3 Nov", "18:00", "Stora Gasque", "goo.gl/maps/xqXnQJQV2JQ2", null);
 
 DROP TABLE companies;
