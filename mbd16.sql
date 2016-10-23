@@ -44,7 +44,7 @@ INSERT INTO schedule (type, title, description, day, duration, location, locatio
 ("Inspiration", "Tobias Rundbom", "Tobias Rundbom, medgrundare och chef på Prototyp, håller ett inspererande tal på stora scenen.", "3 Nov", "11:15-12:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
 ("Karriär", "Monika Hanson", "Grundare av Branschdagen i Medieteknik och Head of Innovation på Viaplay berättar om sin resa efter examen.", "3 Nov", "13:15-14:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
 ("Entrepenörskap", "Donnie Lygonis", "Från KTHs egna företagsinkubator, KTH Innovation kommer Donnie och berättar kring startup-kulturen och sin roll som coach.", "3 Nov", "15:15-16:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
-("Afterwork i META", "MBD 2016", "Afterworken öppnar i vår sektionslokal META under mässans sista timme. Det är ett perfekt tillfälle att ta det lugnt efter mässan och mingla innan middagssittningen börjar. Den är öppen för studenter och representanter från företagen som deltagit på mässan.", "3 Nov", "16:00-18:00", "META", null, null),
+("Afterwork", "MBD 2016", "Afterworken öppnar i vår sektionslokal META under mässans sista timme. Det är ett perfekt tillfälle att ta det lugnt efter mässan och mingla innan middagssittningen börjar. Den är öppen för studenter och representanter från företagen som deltagit på mässan.", "3 Nov", "16:00-18:00", "META", null, null),
 ("Mässan Stänger", "MBD 2016", "Medias Branschdag stänger.", "3 Nov", "17:00", "Nymble", "goo.gl/maps/xqXnQJQV2JQ2", null),
 
 ("Gasque", "Branschdagssittningen", "Sittningen öppnar dörrarna!", "3 Nov", "18:00", "Stora Gasque", "goo.gl/maps/xqXnQJQV2JQ2", null);
