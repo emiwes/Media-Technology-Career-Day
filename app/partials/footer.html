@@ -10,7 +10,17 @@
             </a>
         </div>
 
+        <h1 style="padding-top:100px">Vi tackar våra sponsorer</h1>
+        <hr class="titleLineBlack" style=""></hr>
+
+        <div class="" style="display:inline" ng-repeat="sponsor in getSponsors()">
+            <a ng-href="http://{{sponsor.website}}" target="_blank">
+                <img class="companyFooterIcon" ng-src="img/sponsors/{{sponsor.logo}}" style="" />
+            </a>
+        </div>
     </div>
+
+
 </div>
 
 <footer>
