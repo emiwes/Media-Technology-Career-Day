@@ -80,3 +80,19 @@ INSERT INTO companies (id, name, description, logo, website) VALUES
 ('safemind', 'Safemind', 'Vi rekryterar digitala team med det bästa nätverket i Sverige. Vi är specialister på att rekrytera personal till tjänster där IT, teknik och media står i fokus. Det gäller både tjänster som kräver djupa tekniska kunskaper såväl som sälj- och marknadsroller där teknik är en viktig del av erbjudandet.\n\nFör oss handlar rekrytering om att förstå människors drivkrafter och kompetenser och matcha dessa mot våra kunders föränderliga vardag, oftast i en digital context. Att identifiera och tillsätta nyckelpersoner som gör en verklig skillnad är det vi tycker är allra roligast! Med den allt tuffare konkurrensen om de allra bästa kandidaterna är ett väl upparbetat nätverk nyckeln till att snabbt hitta rätt kompetens.\n\nVi har haft förmånen att hjälpa många av de mest framgångsrika techbolagen i sina tillväxtresor från startup till börsintroduktioner, och bra utmaningar lockar de smartaste kandidaterna och bra kandidater lockar de roligaste bolagen.\n\nVi skulle kunna berätta ännu mer om oss själva men föredrar faktiskt att berätta om våra kunder. Vi har haft förmånen att arbeta med några av världens mest framsynta bolag och det tycker vi väger tyngre än ord: King, Spotify, DICE, Tobii, PriceRunner, Fishbrain, SEB, Viaplay, NetEnt, FEO Media, Hemnet och Folksam för att nämna några.\n\nVåra lediga tjänster, och mycket mer, hittar du på vår hemsida:', 'safemind.png', 'www.safemind.se'),
 ('urbit', 'urb-it', "urb-it är ett snabbväxande start-up som skapar ett helt nytt sätt att handla. Med urb-it kan du shoppa online och få varan personligt överlämnad direkt – eller när det passar dig. Kort sagt: shopping på ett banbrytande bekvämt och hållbart sätt. Helt på dina villkor!\n\nVår vision är att revolutionera shoppingbranschen och skapa ett helt nytt sätt att handla. Vi står på din sida och brinner för att ge dig en banbrytande bekväm köpupplevelse, helt på dina villkor. För oss är det inte ok att du ska behöva vänta era dagar på ditt köp eller hämta ut din vara själv. Därför utmanar vi konventionerna, tänker nytt och kommer ständigt med nya lösningar på morgondagens shopping.", 'urbit.svg', 'www.urb-it.com/sv/stockholm'),
 ('netlight', '', '', 'netlight.png', 'www.netlight.com');
+
+DROP TABLE sponsors;
+CREATE TABLE sponsors(
+    id VARCHAR(255) NOT NULL,
+    logo VARCHAR(255) NOT NULL,
+    website VARCHAR(255) NOT NULL,
+    PRIMARY KEY(id)
+) ENGINE = InnoDB;
+
+INSERT INTO sponsors (id, logo, website) VALUES
+('arvidnordquist', 'arvidnordquist.png', 'www.arvidnordquist.se'),
+('sverigesingenjorer', 'sverigesingenjorer.png', 'www.sverigesingenjorer.se'),
+('tetrapak', 'tetrapak.png', 'www.tetrapak.se'),
+('filter', 'filter.png', 'www.magasinetfilter.se'),
+('viaplay', 'viaplay.png', 'www.viaplay.se'),
+('comviq', 'comviq.png', 'www.comviq.se');
