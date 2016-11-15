@@ -95,4 +95,5 @@ INSERT INTO sponsors (id, logo, website) VALUES
 ('tetrapak', 'tetrapak.png', 'www.tetrapak.se'),
 ('filter', 'filter.png', 'www.magasinetfilter.se'),
 ('viaplay', 'viaplay.png', 'www.viaplay.se'),
-('comviq', 'comviq.png', 'www.comviq.se');
+('comviq', 'comviq.png', 'www.comviq.se'),
+('studentkortet', 'studentkortet.png', 'www.studentkortet.se');
